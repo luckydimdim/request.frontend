@@ -6,7 +6,7 @@ import 'package:resources_loader/resources_loader.dart';
 @Component(selector: 'request', templateUrl: 'request_component.html')
 class RequestComponent implements AfterViewInit {
   static const String route_name = 'Request';
-  static const String route_path = 'Request';
+  static const String route_path = 'request';
   static const Route route = const Route(
       path: RequestComponent.route_path,
       component: RequestComponent,
