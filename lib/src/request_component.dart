@@ -29,15 +29,19 @@ class RequestComponent implements AfterViewInit {
       'vendor/moment/min/', 'moment.min.js', false);
 
     _resourcesLoader.loadScript(
-      'vendor/bootstrap-daterangepicker/', 'daterangepicker.js', false,
-      onData: () {
-        var object = new JsObject(context['\$'], ['#request-date-range-picker']);
-        object.callMethod('daterangepicker', null);
-      });
+      'vendor/bootstrap-daterangepicker/', 'daterangepicker.js', false);
 
     _resourcesLoader.loadStyle('vendor/bootstrap-daterangepicker/', 'daterangepicker.css');
 
     _resourcesLoader.loadScript(
-      'vendor/bootstrap-daterangepicker/', 'daterangepicker.js', false);
+      'vendor/bootstrap-daterangepicker/', 'daterangepicker.js', false
+      /*,
+      onData: () {*/
+        /*var object = new JsObject(context['\$'], ['#request-date-range-picker']);
+        object.callMethod('daterangepicker', null);*/
+        /*_resourcesLoader.loadScript('packages/request/src/', 'init.js', false);*/
+      /*}*/);
+
+    _resourcesLoader.loadScript('packages/request/src/', 'init.js', false);
   }
 }
