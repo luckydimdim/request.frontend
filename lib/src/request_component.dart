@@ -30,8 +30,8 @@ class RequestComponent implements AfterViewInit {
         'vendor/bootstrap-daterangepicker/', 'daterangepicker.css');
 
     _resourcesLoader.loadScript(
-        'vendor/bootstrap-daterangepicker/', 'daterangepicker.js', false);
+        'vendor/bootstrap-daterangepicker/', 'daterangepicker.js', false);    
 
-    _resourcesLoader.loadScript('packages/request/src/', 'init.js', false);
+    _resourcesLoader.loadScript('packages/request/src/', 'init-date-range.js', false);
   }
 }
