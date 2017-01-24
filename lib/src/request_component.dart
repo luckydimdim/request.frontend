@@ -4,9 +4,7 @@ import 'package:angular2/router.dart';
 
 import 'package:resources_loader/resources_loader.dart';
 
-@Component(
-    selector: 'request',
-    templateUrl: 'request_component.html')
+@Component(selector: 'request', templateUrl: 'request_component.html')
 class RequestComponent implements AfterViewInit {
   static const String route_name = 'Request';
   static const String route_path = 'Request';
@@ -22,25 +20,24 @@ class RequestComponent implements AfterViewInit {
 
   @override
   void ngAfterViewInit() {
-    _resourcesLoader.loadScript(
-      'assets/js/', 'app.js', false);
+    _resourcesLoader.loadScript('assets/js/', 'app.js', false);
+
+    _resourcesLoader.loadScript('vendor/moment/min/', 'moment.min.js', false);
 
     _resourcesLoader.loadScript(
-      'vendor/moment/min/', 'moment.min.js', false);
+        'vendor/bootstrap-daterangepicker/', 'daterangepicker.js', false);
+
+    _resourcesLoader.loadStyle(
+        'vendor/bootstrap-daterangepicker/', 'daterangepicker.css');
 
     _resourcesLoader.loadScript(
-      'vendor/bootstrap-daterangepicker/', 'daterangepicker.js', false);
-
-    _resourcesLoader.loadStyle('vendor/bootstrap-daterangepicker/', 'daterangepicker.css');
-
-    _resourcesLoader.loadScript(
-      'vendor/bootstrap-daterangepicker/', 'daterangepicker.js', false
-      /*,
+        'vendor/bootstrap-daterangepicker/', 'daterangepicker.js', false
+        /*,
       onData: () {*/
         /*var object = new JsObject(context['\$'], ['#request-date-range-picker']);
         object.callMethod('daterangepicker', null);*/
         /*_resourcesLoader.loadScript('packages/request/src/', 'init.js', false);*/
-      /*}*/);
+        /*}*/);
 
     _resourcesLoader.loadScript('packages/request/src/', 'init.js', false);
   }
