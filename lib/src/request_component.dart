@@ -7,7 +7,7 @@ import 'package:resources_loader/resources_loader.dart';
 import 'package:grid/grid.dart';
 
 @Component(selector: 'request', templateUrl: 'request_component.html')
-class RequestComponent implements AfterViewInit, OnDestroy {
+class RequestComponent implements OnInit, OnDestroy {
   static const String route_name = 'Request';
   static const String route_path = 'request';
   static const Route route = const Route(
@@ -24,7 +24,7 @@ class RequestComponent implements AfterViewInit, OnDestroy {
   RequestComponent(this._router, this._resourcesLoaderService) {}
 
   @override
-  void ngAfterViewInit() {
+  void ngOnInit() {
     _resourcesLoaderService.loadScript('assets/js/', 'app.js', false);
 
     _resourcesLoaderService.loadScript('vendor/moment/min/', 'moment.min.js', false);
@@ -56,10 +56,17 @@ class RequestComponent implements AfterViewInit, OnDestroy {
     newActivePanel.classes.add('active');
 
     WorksGridInit();
-    MaterialsGridInit();
+    //MaterialsGridInit(); // FIXME: перерисовывать таблицу при активации таба
   }
 
   void WorksGridInit(){
+
+    var showOptions = new ShowOptions()
+    ..columnHeaders=true
+    ..emptyRecords=true
+    ..selectColumn=true
+    ..header=false;
+
 
     var columns = new List<Column>();
 
@@ -79,11 +86,14 @@ class RequestComponent implements AfterViewInit, OnDestroy {
     var options = new GridOptions()
       ..name = 'worksGrid'
       ..columns = columns
+      ..show = showOptions
       ..url=' //cm-ylng-msk-01/cmas-backend/api/contract/1/works'
       ..method='GET';
 
     _worksGrid = new Grid(this._resourcesLoaderService, "#worksGrid", options);
   }
+
+
 
   void MaterialsGridInit(){
 
