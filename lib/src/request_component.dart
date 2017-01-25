@@ -120,8 +120,15 @@ class RequestComponent implements OnInit, OnDestroy {
 
   @override
   void ngOnDestroy() {
-    _materialsGrid.Destroy();
-    _worksGrid.Destroy();
+
+    if (_materialsGrid!= null) {
+      _materialsGrid.Destroy();
+    }
+
+    if (_worksGrid != null) {
+      _worksGrid.Destroy();
+    }
+
   }
 
 }
