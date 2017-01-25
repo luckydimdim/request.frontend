@@ -4,9 +4,10 @@ import 'package:angular2/core.dart';
 import 'package:angular2/router.dart';
 
 import 'package:resources_loader/resources_loader.dart';
+import 'package:grid/grid.dart';
 
 @Component(selector: 'request', templateUrl: 'request_component.html')
-class RequestComponent implements AfterViewInit {
+class RequestComponent implements AfterViewInit, OnDestroy {
   static const String route_name = 'Request';
   static const String route_path = 'request';
   static const Route route = const Route(
@@ -15,26 +16,29 @@ class RequestComponent implements AfterViewInit {
       name: RequestComponent.route_name);
 
   final Router _router;
-  final ResourcesLoaderService _resourcesLoader;
+  final ResourcesLoaderService _resourcesLoaderService;
 
-  RequestComponent(this._router, this._resourcesLoader) {}
+  Grid _materialsGrid;
+  Grid _worksGrid;
+
+  RequestComponent(this._router, this._resourcesLoaderService) {}
 
   @override
   void ngAfterViewInit() {
-    _resourcesLoader.loadScript('assets/js/', 'app.js', false);
+    _resourcesLoaderService.loadScript('assets/js/', 'app.js', false);
 
-    _resourcesLoader.loadScript('vendor/moment/min/', 'moment.min.js', false);
+    _resourcesLoaderService.loadScript('vendor/moment/min/', 'moment.min.js', false);
 
-    _resourcesLoader.loadScript(
+    _resourcesLoaderService.loadScript(
         'vendor/bootstrap-daterangepicker/', 'daterangepicker.js', false);
 
-    _resourcesLoader.loadStyle(
+    _resourcesLoaderService.loadStyle(
         'vendor/bootstrap-daterangepicker/', 'daterangepicker.css');
 
-    _resourcesLoader.loadScript(
-        'vendor/bootstrap-daterangepicker/', 'daterangepicker.js', false);    
+    _resourcesLoaderService.loadScript(
+        'vendor/bootstrap-daterangepicker/', 'daterangepicker.js', false);
 
-    _resourcesLoader.loadScript('packages/request/src/', 'init-date-range.js', false);
+    _resourcesLoaderService.loadScript('packages/request/src/', 'init-date-range.js', false);
 
     document.body.classes.add('mobile-open');
     document.body.classes.add('aside-menu-open');
@@ -50,5 +54,64 @@ class RequestComponent implements AfterViewInit {
 
     var newActivePanel = querySelector('.aside-menu .tab-content div[id="settings"]') as DivElement;
     newActivePanel.classes.add('active');
+
+    WorksGridInit();
+    MaterialsGridInit();
   }
+
+  void WorksGridInit(){
+
+    var columns = new List<Column>();
+
+    columns.add(new Column(field: 'Code', caption: 'Код', size: '100px', frozen: true));
+    columns.add(new Column(field: 'Name', caption: 'Наименование этапа/работы', size: '300px', frozen: true));
+
+    columns.add(new Column(field: 'BeginDate', caption: 'Начало', size: '100px', render: 'date'));
+    columns.add(new Column(field: 'EndDate', caption: 'Окончание', size: '100px', render: 'date'));
+    columns.add(new Column(field: 'Unit', caption: 'Ед. изм.', size: '100px'));
+    columns.add(new Column(field: 'Amount', caption: 'Объем', size: '100px'));
+    columns.add(new Column(field: 'Cost', caption: 'Стоимость', size: '100px'));
+    columns.add(new Column(field: 'Currency', caption: 'Валюта', size: '100px'));
+    columns.add(new Column(field: 'ContractorName', caption: 'Исполнитель', size: '200px'));
+
+    //columns.add(new Column(field: 'ObjectConstruction', caption: 'Объект строительства', size: '200px'));
+
+    var options = new GridOptions()
+      ..name = 'worksGrid'
+      ..columns = columns
+      ..url=' //cm-ylng-msk-01/cmas-backend/api/contract/1/works'
+      ..method='GET';
+
+    _worksGrid = new Grid(this._resourcesLoaderService, "#worksGrid", options);
+  }
+
+  void MaterialsGridInit(){
+
+    var columns = new List<Column>();
+
+    columns.add(new Column(field: 'Code', caption: 'Код', size: '100px', frozen: true));
+    columns.add(new Column(field: 'Name', caption: 'Наименование материалов', size: '300px', frozen: true));
+
+    columns.add(new Column(field: 'Unit', caption: 'Ед. изм.', size: '100px'));
+    columns.add(new Column(field: 'Amount', caption: 'Количество', size: '100px'));
+    columns.add(new Column(field: 'Currency', caption: 'Валюта', size: '100px'));
+    columns.add(new Column(field: 'ObjectConstruction', caption: 'Объект строительства', size: '200px'));
+    columns.add(new Column(field: 'Cost', caption: 'Стоимость', size: '100px'));
+    columns.add(new Column(field: 'DeliveryDate', caption: 'Дата поставки', size: '150px', render: 'date'));
+
+    var options = new GridOptions()
+      ..name = 'materialsGrid'
+      ..columns = columns
+      ..url=' //cm-ylng-msk-01/cmas-backend/api/contract/1/materials'
+      ..method='GET';
+
+    _materialsGrid = new Grid(this._resourcesLoaderService, "#materialsGrid", options);
+  }
+
+  @override
+  void ngOnDestroy() {
+    _materialsGrid.Destroy();
+    _worksGrid.Destroy();
+  }
+
 }
