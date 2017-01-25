@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:angular2/core.dart';
 import 'package:angular2/router.dart';
 
@@ -33,5 +35,20 @@ class RequestComponent implements AfterViewInit {
         'vendor/bootstrap-daterangepicker/', 'daterangepicker.js', false);    
 
     _resourcesLoader.loadScript('packages/request/src/', 'init-date-range.js', false);
+
+    document.body.classes.add('mobile-open');
+    document.body.classes.add('aside-menu-open');
+
+    var oldActiveLink = querySelector('.aside-menu .nav-tabs li a.active') as AnchorElement;
+    oldActiveLink.classes.remove('active');
+
+    var newActiveLink = querySelector('.aside-menu .nav-tabs li a[href="#settings"]') as AnchorElement;
+    newActiveLink.classes.add('active');
+
+    var oldActivePanel = querySelector('.aside-menu .tab-content div.active') as DivElement;
+    oldActivePanel.classes.remove('active');
+
+    var newActivePanel = querySelector('.aside-menu .tab-content div[id="settings"]') as DivElement;
+    newActivePanel.classes.add('active');
   }
 }
