@@ -4,9 +4,24 @@
       <div class="col-md-12">
         <div class="card">
           <div class="card-header">
-            <i class="icon-check"></i> Акт о приемке выполненных работ
+            <i class="fa fa-cubes"></i> Акт о приемке выполненных работ
           </div>
           <div class="card-block">
+            <div class="content">
+              <div class="row">
+                <div class="col-md-2">
+                  Дата составления документа
+                  <input date-range-picker="" id="request-cc2-date-range-picker"
+                         placeholder="Укажите дату"
+                         class="form-control date-picker ng-pristine ng-valid ng-isolate-scope ng-not-empty ng-touched"
+                         type="text" ng-model="date" options="opts"
+                         style="" />
+                </div>
+              </div>
+            </div>
+
+            <br />
+
             <table class="table table-bordered table-striped table-condensed font-xs">
               <thead>
                 <tr>
@@ -19,7 +34,7 @@
                 <tr>
                   <th rowspan="3">по порядку</th>
                   <th rowspan="3">позиции по смете</th>
-                  <th rowspan="3">Количество</th>
+                  <th rowspan="3" width="2%">Количество</th>
                   <th colspan="3">Цена за единицу, руб</th>
                   <th colspan="3">Стоимость, руб</th>
                 </tr>
@@ -56,8 +71,8 @@
                   <td class="font-weight-bold">2</td>
                   <td class="font-weight-bold">Берегоукрепление корневой части ЮВЛЗС на территории</td>
                   <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>кг</td>
+                  <td><input type="text" class="form-control" placeholder="100" /></td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -70,8 +85,8 @@
                   <td class="font-weight-bold">2.1</td>
                   <td>Изготовление и погружение в лицевую стенку свай-оболочек длиной 9,3 м и 11,3 м Ø1420х14</td>
                   <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>день</td>
+                  <td><input type="text" class="form-control" placeholder="200" /></td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -84,8 +99,8 @@
                   <td class="font-weight-bold">2.1.1</td>
                   <td>Транспортировка трубы до левого берега г.Архангельск (без учета нормы расхода)</td>
                   <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>час</td>
+                  <td><input type="text" class="form-control" placeholder="300" /></td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -98,8 +113,8 @@
                   <td class="font-weight-bold">2.8</td>
                   <td>Устройство дренажной призмы  (укладка пескоматов, отсыпка щебнем)</td>
                   <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>метр</td>
+                  <td><input type="text" class="form-control" placeholder="50" /></td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -112,8 +127,8 @@
                   <td class="font-weight-bold">2.8.1</td>
                   <td>Транспортировка щебня п.Сабетта (без учета нормы расхода)</td>
                   <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>литр</td>
+                  <td><input type="text" class="form-control" placeholder="90" /></td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -126,8 +141,8 @@
                   <td></td>
                   <td class="font-weight-bold">Итого по берегоукреплению корневой части ЮВЛЗС на территории </td>
                   <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>раз</td>
+                  <td><input type="text" class="form-control" placeholder="30" /></td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -140,8 +155,8 @@
                   <td class="font-weight-bold">3</td>
                   <td class="font-weight-bold">Берегоукрепление площадки факельной установки  на территории</td>
                   <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>км</td>
+                  <td><input type="text" class="form-control" placeholder="200" /></td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -154,8 +169,8 @@
                   <td class="font-weight-bold">3.9</td>
                   <td>Отсыпка щебня с тщательным равнением</td>
                   <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>литр</td>
+                  <td><input type="text" class="form-control" placeholder="600" /></td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -168,8 +183,8 @@
                   <td class="font-weight-bold">3.9.1</td>
                   <td>Транспортировка щебня п.Сабетта (без учета нормы расхода)</td>
                   <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>барель</td>
+                  <td><input type="text" class="form-control" placeholder="11" /></td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -182,8 +197,8 @@
                   <td></td>
                   <td class="font-weight-bold">Итого по берегоукреплению площадки факельной установки  на территории</td>
                   <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>метр</td>
+                  <td><input type="text" class="form-control" placeholder="45" /></td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -196,8 +211,8 @@
                   <td class="font-weight-bold">4</td>
                   <td class="font-weight-bold">Берегоукрепление межплощадочной территории</td>
                   <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>парсек</td>
+                  <td><input type="text" class="form-control" placeholder="15" /></td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -210,8 +225,8 @@
                   <td class="font-weight-bold">4.1</td>
                   <td>Изготовление и погружение свай-оболочек  9,55 м и 11,55 м Ø1020х12 с замковыми соединениями </td>
                   <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>месяц</td>
+                  <td><input type="text" class="form-control" placeholder="90" /></td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -224,8 +239,8 @@
                   <td class="font-weight-bold">4.1.1</td>
                   <td>Транспортировка трубы до левого берега г.Архангельск (без учета нормы расхода)</td>
                   <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>человек</td>
+                  <td><input type="text" class="form-control" placeholder="20" /></td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -238,8 +253,8 @@
                   <td class="font-weight-bold">4.7</td>
                   <td>Устройство дренажной призмы (укладка геотекстиля, отсыпка щебня)</td>
                   <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>попугай</td>
+                  <td><input type="text" class="form-control" placeholder="1000" /></td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -252,8 +267,8 @@
                   <td class="font-weight-bold">4.7.1</td>
                   <td>Транспортировка щебня п.Сабетта (без учета нормы расхода)</td>
                   <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>руб</td>
+                  <td><input type="text" class="form-control" placeholder="2000" /></td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -266,8 +281,8 @@
                   <td></td>
                   <td class="font-weight-bold">Итого по берегоукреплению межплощадочной территории территории</td>
                   <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>usd</td>
+                  <td><input type="text" class="form-control" placeholder="300" /></td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -280,8 +295,8 @@
                   <td></td>
                   <td class="font-weight-bold">Итого по акту по дог.№ 1485/16-ЯСПГ/MRTSE-0843 от 21.10.2016г. </td>
                   <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>jpy</td>
+                  <td><input type="text" class="form-control" placeholder="150" /></td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -295,7 +310,7 @@
                   <td class="font-weight-bold">Итого прочие работы и затраты:</td>
                   <td></td>
                   <td></td>
-                  <td></td>
+                  <td><input type="text" class="form-control" placeholder="500" /></td>
                   <td></td>
                   <td></td>
                   <td></td>

@@ -7,8 +7,7 @@
             <a class="nav-link" [routerLink]="['RequestSettings']"><i class="fa fa-cog"></i> Параметры </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['RequestCc2']"><i class="fa fa-cubes"></i>
-              Акты КС-2</a>
+            <a class="nav-link" [routerLink]="['RequestCc2']"><i class="fa fa-cubes"></i> Акты КС-2</a>
           </li>
           <li class="nav-item pl-1">
             <a class="nav-link" href="#"><i class="fa fa-cube"></i>
@@ -28,8 +27,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fa fa-money"></i> Справка КС-3
-            </a>
+            <a class="nav-link" [routerLink]="['RequestCc3']"><i class="fa fa-money"></i> Справки КС-3</a>
           </li>
           <li class="nav-item pl-1">
             <a class="nav-link" href="#"><i class="fa fa-cube"></i> Морской порт
@@ -40,8 +38,10 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fa fa-check-square-o"></i> Итог
-            </a>
+            <a class="nav-link" [routerLink]="['RequestTs']"><i class="fa fa-clock-o"></i> Time Sheet</a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['RequestSummary']"><i class="fa fa-check-square-o"></i> Итого </a>
           </li>
         </ul>
       </nav>

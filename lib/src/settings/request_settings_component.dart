@@ -38,14 +38,13 @@ class RequestSettingsComponent implements OnInit, OnDestroy {
         'vendor/bootstrap-daterangepicker/', 'daterangepicker.css');
 
     _resourcesLoaderService.loadScript(
-        'vendor/bootstrap-daterangepicker/', 'daterangepicker.js', false);
-
-    _resourcesLoaderService.loadScript(
         'packages/request/src/settings/', 'init-date-range.js', false);
 
+    // TODO: Продумать показ/скрытие меню
     document.body.classes.add('mobile-open');
     document.body.classes.add('aside-menu-open');
 
+    // TODO: Сделать более удобным переключение вкладок и показ/скрытие меню
     var oldActiveLink =
         querySelector('.aside-menu .nav-tabs li a.active') as AnchorElement;
     oldActiveLink.classes.remove('active');
@@ -64,6 +63,7 @@ class RequestSettingsComponent implements OnInit, OnDestroy {
         as DivElement;
     newActivePanel.classes.add('active');
 
+    // TODO: Продумать управления содержимым бокового меню
     var htmlElement = '''
     <h6>Создание заявки на проверку</h6>
       <div>
