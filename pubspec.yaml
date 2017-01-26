@@ -1,6 +1,6 @@
 name: request
 version: 0.0.1
-description: Заявка на проверку
+description: Раздел создания заявок на проверку
 author: yamal lng
 homepage: http://yamallng.ru/
 
@@ -19,6 +19,8 @@ dependencies:
       git: http://cm-ylng-msk-04/git/grid.frontend.git
     resources_loader:
       git: http://cm-ylng-msk-04/git/resources_loader.frontend.git
+    auth_router_outlet:
+      git: http://cm-ylng-msk-04/git/auth_router_outlet.frontend.git
 dev_dependencies:
     test: ^0.12.18                        # A library for writing dart unit tests. https://pub.dartlang.org/packages/test
     yaml: ^2.1.12                         # A parser for YAML. https://pub.dartlang.org/packages/yaml
