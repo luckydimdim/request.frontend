@@ -64,6 +64,49 @@ class RequestSettingsComponent implements OnInit, OnDestroy {
         as DivElement;
     newActivePanel.classes.add('active');
 
+    var htmlElement = '''
+    <h6>Создание заявки на проверку</h6>
+      <div>
+      <small class="text-muted">Выберите договор и укажите период для
+      отображения списка работ и материалов.
+      </small>
+      </div>
+      <div class="aside-options">
+      <div class="clearfix mt-2">
+      <form action="" method="post" class="ng-pristine ng-valid">
+      <div class="form-group">
+      <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-file"></i>
+      </span>
+      <input type="text" id="contract-number"
+      name="contract-number" class="form-control"
+      placeholder="Договор"/>
+      </div>
+      </div>
+      <div class="form-group">
+      <div class="input-group">
+      <span class="input-group-addon"><i
+      class="fa fa-calendar"></i>
+      </span>
+      <input date-range-picker="" id="request-date-range-picker"
+      placeholder="Период"
+      class="form-control date-picker ng-pristine ng-valid ng-isolate-scope ng-not-empty ng-touched"
+      type="text" ng-model="date" options="opts"
+      style=""/>
+      </div>
+      </div>
+      <div class="form-group form-actions">
+      <button type="submit" class="btn btn-sm btn-success">
+      Показать работы и материалы
+      </button>
+      </div>
+      </form>
+      </div>
+      </div>
+      <hr/>''';
+
+    newActivePanel.innerHtml = htmlElement;
+
     WorksGridInit();
     //MaterialsGridInit(); // FIXME: перерисовывать таблицу при активации таба
   }
