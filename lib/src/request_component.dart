@@ -3,9 +3,13 @@ import 'package:angular2/router.dart';
 
 import 'settings/request_settings_component.dart';
 import 'cc2/request_cc2_component.dart';
+import 'cc2_object/request_cc2_object_component.dart';
+import 'cc2_object_contractor/request_cc2_object_contractor_component.dart';
+
 import 'cc3/request_cc3_component.dart';
 import 'summary/request_summary_component.dart';
 import 'ts/request_ts_component.dart';
+
 
 @Component(
   selector: 'request',
@@ -14,6 +18,8 @@ import 'ts/request_ts_component.dart';
 @RouteConfig(const [
   RequestSettingsComponent.route,
   RequestCc2Component.route,
+  RequestCc2ObjectComponent.route,
+  RequestCc2ObjectContractorComponent.route,
   RequestCc3Component.route,
   RequestSummaryComponent.route,
   RequestTsComponent.route])

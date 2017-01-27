@@ -10,21 +10,20 @@
             <a class="nav-link" [routerLink]="['RequestCc2']"><i class="fa fa-cubes"></i> Акты КС-2</a>
           </li>
           <li class="nav-item pl-1">
-            <a class="nav-link" href="#"><i class="fa fa-cube"></i>
+            <a class="nav-link" [routerLink]="['RequestCc2Object', {'objectName': 'sea-port'}]"><i class="fa fa-cube"></i>
               Морской порт</a>
           </li>
           <li class="nav-item pl-2">
-            <a class="nav-link" href="#"><i class="fa fa-user-secret"></i> Подрядчик 1</a>
+            <a class="nav-link" [routerLink]="['RequestCc2ObjectContractor', {'objectName': 'sea-port', 'contractorName': 'some-company'}]"><i class="fa fa-user-secret"></i> Подрядчик 1</a>
           </li>
           <li class="nav-item pl-2">
-            <a class="nav-link" href="#"><i class="fa fa-user-secret"></i> Подрядчик 2</a>
+            <a class="nav-link" [routerLink]="['RequestCc2ObjectContractor', {'objectName': 'sea-port', 'contractorName': 'some-other-company'}]"><i class="fa fa-user-secret"></i> Подрядчик 2</a>
           </li>
           <li class="nav-item pl-1">
-            <a class="nav-link" href="#"><i class="fa fa-cube"></i> Аэродром</a>
+            <a class="nav-link" [routerLink]="['RequestCc2Object', {'objectName': 'airport'}]"><i class="fa fa-cube"></i> Аэродром</a>
           </li>
           <li class="nav-item pl-2">
-            <a class="nav-link" href="#"><i class="fa fa-user-secret"></i> Подрядчик 1
-            </a>
+            <a class="nav-link" [routerLink]="['RequestCc2ObjectContractor', {'objectName': 'airport', 'contractorName': 'some-company'}]"><i class="fa fa-user-secret"></i> Подрядчик 1</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" [routerLink]="['RequestCc3']"><i class="fa fa-money"></i> Справки КС-3</a>
