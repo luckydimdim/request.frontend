@@ -29,12 +29,10 @@
             <a class="nav-link" [routerLink]="['RequestCc3']"><i class="fa fa-money"></i> Справки КС-3</a>
           </li>
           <li class="nav-item pl-1">
-            <a class="nav-link" href="#"><i class="fa fa-cube"></i> Морской порт
-            </a>
+            <a class="nav-link" [routerLink]="['RequestCc3Object', {'objectName': 'sea-port'}]"><i class="fa fa-cube"></i> Морской порт</a>
           </li>
           <li class="nav-item pl-1">
-            <a class="nav-link" href="#"><i class="fa fa-cube"></i> Резервуары
-            </a>
+            <a class="nav-link" [routerLink]="['RequestCc3Object', {'objectName': 'reservoirs'}]"><i class="fa fa-cube"></i> Резервуары</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" [routerLink]="['RequestTs']"><i class="fa fa-clock-o"></i> Time Sheet</a>
