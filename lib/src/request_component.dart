@@ -1,3 +1,4 @@
+import 'dart:html';
 import 'package:angular2/core.dart';
 import 'package:angular2/router.dart';
 import 'settings/request_settings_component.dart';
@@ -36,5 +37,12 @@ class RequestComponent implements AfterViewInit {
   RequestComponent(this._router) {}
 
   @override
+<<<<<<< HEAD
   void ngAfterViewInit() {}
+=======
+  void ngAfterViewInit() {
+    var previus = querySelector('.go-previus') as ButtonElement;
+    var next = querySelector('.go-previus') as ButtonElement;
+  }
+>>>>>>> added buttons
 }
