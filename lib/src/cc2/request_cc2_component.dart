@@ -4,9 +4,9 @@ import 'package:angular2/core.dart';
 import 'package:angular2/router.dart';
 
 @Component(
-  selector: 'request-cc2',
-  templateUrl: 'request_cc2_component.html',
-  directives: const [RouterLink])
+    selector: 'request-cc2',
+    templateUrl: 'request_cc2_component.html',
+    directives: const [RouterLink])
 class RequestCc2Component implements AfterViewInit {
   static const String route_name = 'RequestCc2';
   static const String route_path = 'cc-2';
@@ -17,7 +17,7 @@ class RequestCc2Component implements AfterViewInit {
 
   final Router _router;
 
-  RequestCc2Component(this._router) { }
+  RequestCc2Component(this._router) {}
 
   @override
   void ngAfterViewInit() {

@@ -5,8 +5,11 @@ import 'package:angular2/router.dart';
 
 import 'package:resources_loader/resources_loader.dart';
 import 'package:grid/grid.dart';
+import 'package:daterangepicker/daterangepicker.dart';
 
-@Component(selector: 'request-settings', templateUrl: 'request_settings_component.html')
+@Component(
+    selector: 'request-settings',
+    templateUrl: 'request_settings_component.html')
 class RequestSettingsComponent implements OnInit, OnDestroy {
   static const String route_name = 'RequestSettings';
   static const String route_path = 'settings';
@@ -26,20 +29,6 @@ class RequestSettingsComponent implements OnInit, OnDestroy {
 
   @override
   void ngOnInit() {
-    _resourcesLoaderService.loadScript('assets/js/', 'app.js', false);
-
-    _resourcesLoaderService.loadScript(
-        'vendor/moment/min/', 'moment.min.js', false);
-
-    _resourcesLoaderService.loadScript(
-        'vendor/bootstrap-daterangepicker/', 'daterangepicker.js', false);
-
-    _resourcesLoaderService.loadStyle(
-        'vendor/bootstrap-daterangepicker/', 'daterangepicker.css');
-
-    _resourcesLoaderService.loadScript(
-        'packages/request/src/settings/', 'init-date-range.js', false);
-
     // TODO: Продумать показ/скрытие меню
     document.body.classes.add('mobile-open');
     document.body.classes.add('aside-menu-open');
@@ -51,7 +40,7 @@ class RequestSettingsComponent implements OnInit, OnDestroy {
 
     var newActiveLink =
         querySelector('.aside-menu .nav-tabs li a[href="#settings"]')
-        as AnchorElement;
+            as AnchorElement;
     newActiveLink.classes.add('active');
 
     var oldActivePanel =
@@ -60,7 +49,7 @@ class RequestSettingsComponent implements OnInit, OnDestroy {
 
     var newActivePanel =
         querySelector('.aside-menu .tab-content div[id="settings"]')
-        as DivElement;
+            as DivElement;
     newActivePanel.classes.add('active');
 
     // TODO: Продумать управления содержимым бокового меню
@@ -107,8 +96,16 @@ class RequestSettingsComponent implements OnInit, OnDestroy {
 
     newActivePanel.innerHtml = htmlElement;
 
+    DateRangeInit();
     WorksGridInit();
     //MaterialsGridInit(); // FIXME: перерисовывать таблицу при активации таба
+  }
+
+  void DateRangeInit() {
+    var options = new DateRangePickerOptions();
+
+    new DateRangePicker(
+        this._resourcesLoaderService, '#request-date-range-picker', options);
   }
 
   void WorksGridInit() {

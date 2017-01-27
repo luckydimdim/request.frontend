@@ -10,9 +10,9 @@ import 'summary/request_summary_component.dart';
 import 'ts/request_ts_component.dart';
 
 @Component(
-  selector: 'request',
-  templateUrl: 'request_component.html',
-  directives: const [RouterLink, RouterOutlet])
+    selector: 'request',
+    templateUrl: 'request_component.html',
+    directives: const [RouterLink, RouterOutlet])
 @RouteConfig(const [
   RequestSettingsComponent.route,
   RequestCc2Component.route,
@@ -21,7 +21,8 @@ import 'ts/request_ts_component.dart';
   RequestCc3Component.route,
   RequestCc3ObjectComponent.route,
   RequestSummaryComponent.route,
-  RequestTsComponent.route])
+  RequestTsComponent.route
+])
 class RequestComponent implements AfterViewInit {
   static const String route_name = 'Request';
   static const String route_path = 'request/...';
@@ -35,5 +36,5 @@ class RequestComponent implements AfterViewInit {
   RequestComponent(this._router) {}
 
   @override
-  void ngAfterViewInit() { }
+  void ngAfterViewInit() {}
 }

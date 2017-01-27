@@ -3,7 +3,8 @@ import 'dart:html';
 import 'package:angular2/core.dart';
 import 'package:angular2/router.dart';
 
-@Component(selector: 'request-summary', templateUrl: 'request_summary_component.html')
+@Component(
+    selector: 'request-summary', templateUrl: 'request_summary_component.html')
 class RequestSummaryComponent implements AfterViewInit {
   static const String route_name = 'RequestSummary';
   static const String route_path = 'summary';

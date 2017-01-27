@@ -6,8 +6,7 @@ import 'package:angular2/router.dart';
 import 'package:resources_loader/resources_loader.dart';
 
 @Component(
-  selector: 'request-cc3',
-  templateUrl: 'request_cc3_object_component.html')
+    selector: 'request-cc3', templateUrl: 'request_cc3_object_component.html')
 class RequestCc3ObjectComponent implements AfterViewInit {
   static const String route_name = 'RequestCc3Object';
   static const String route_path = 'cc-3/:objectName';
@@ -20,7 +19,8 @@ class RequestCc3ObjectComponent implements AfterViewInit {
   final ResourcesLoaderService _resourcesLoaderService;
   final RouteParams _routeParams;
 
-  RequestCc3ObjectComponent(this._router, this._resourcesLoaderService, this._routeParams) {}
+  RequestCc3ObjectComponent(
+      this._router, this._resourcesLoaderService, this._routeParams) {}
 
   @override
   ngOnInit() {
@@ -34,15 +34,15 @@ class RequestCc3ObjectComponent implements AfterViewInit {
     document.body.classes.remove('aside-menu-open');
 
     _resourcesLoaderService.loadScript(
-      'vendor/moment/min/', 'moment.min.js', false);
+        'vendor/moment/min/', 'moment.min.js', false);
 
     _resourcesLoaderService.loadScript(
-      'vendor/bootstrap-daterangepicker/', 'daterangepicker.js', false);
+        'vendor/bootstrap-daterangepicker/', 'daterangepicker.js', false);
 
     _resourcesLoaderService.loadStyle(
-      'vendor/bootstrap-daterangepicker/', 'daterangepicker.css');
+        'vendor/bootstrap-daterangepicker/', 'daterangepicker.css');
 
     _resourcesLoaderService.loadScript(
-      'packages/request/src/settings/', 'init-date-range.js', false);
+        'packages/request/src/settings/', 'init-date-range.js', false);
   }
 }

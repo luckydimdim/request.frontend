@@ -5,7 +5,9 @@ import 'package:angular2/router.dart';
 
 import 'package:resources_loader/resources_loader.dart';
 
-@Component(selector: 'request-cc2', templateUrl: 'request_cc2_object_contractor_component.html')
+@Component(
+    selector: 'request-cc2',
+    templateUrl: 'request_cc2_object_contractor_component.html')
 class RequestCc2ObjectContractorComponent implements AfterViewInit, OnInit {
   static const String route_name = 'RequestCc2ObjectContractor';
   static const String route_path = 'cc-2/:objectName/:contractorName';
@@ -18,7 +20,8 @@ class RequestCc2ObjectContractorComponent implements AfterViewInit, OnInit {
   final ResourcesLoaderService _resourcesLoaderService;
   final RouteParams _routeParams;
 
-  RequestCc2ObjectContractorComponent(this._router, this._resourcesLoaderService, this._routeParams) { }
+  RequestCc2ObjectContractorComponent(
+      this._router, this._resourcesLoaderService, this._routeParams) {}
 
   @override
   ngOnInit() {
@@ -33,15 +36,15 @@ class RequestCc2ObjectContractorComponent implements AfterViewInit, OnInit {
     document.body.classes.remove('aside-menu-open');
 
     _resourcesLoaderService.loadScript(
-      'vendor/moment/min/', 'moment.min.js', false);
+        'vendor/moment/min/', 'moment.min.js', false);
 
     _resourcesLoaderService.loadScript(
-      'vendor/bootstrap-daterangepicker/', 'daterangepicker.js', false);
+        'vendor/bootstrap-daterangepicker/', 'daterangepicker.js', false);
 
     _resourcesLoaderService.loadStyle(
-      'vendor/bootstrap-daterangepicker/', 'daterangepicker.css');
+        'vendor/bootstrap-daterangepicker/', 'daterangepicker.css');
 
     _resourcesLoaderService.loadScript(
-      'packages/request/src/settings/', 'init-date-range.js', false);
+        'packages/request/src/settings/', 'init-date-range.js', false);
   }
 }
