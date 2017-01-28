@@ -37,12 +37,8 @@ class RequestComponent implements AfterViewInit {
   RequestComponent(this._router) {}
 
   @override
-<<<<<<< HEAD
-  void ngAfterViewInit() {}
-=======
   void ngAfterViewInit() {
     var previus = querySelector('.go-previus') as ButtonElement;
     var next = querySelector('.go-previus') as ButtonElement;
   }
->>>>>>> added buttons
 }

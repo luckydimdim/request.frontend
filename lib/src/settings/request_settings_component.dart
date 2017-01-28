@@ -141,7 +141,8 @@ class RequestSettingsComponent implements OnInit, OnDestroy {
       ..name = 'worksGrid'
       ..columns = columns
       ..show = showOptions
-      ..url = ' //cm-ylng-msk-01/cmas-backend/api/contract/1/works'
+      /*..url = '//cm-ylng-msk-01/cmas-backend/api/contract/1/works'*/
+      ..url = 'http://localhost:5000/api/contract/1/works'
       ..method = 'GET';
 
     _worksGrid = new Grid(this._resourcesLoaderService, "#worksGrid", options);
