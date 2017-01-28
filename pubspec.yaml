@@ -16,16 +16,16 @@ dependencies:
     dart_to_js_script_rewriter: ^1.0.2    # Replaces Dart script tags with JavaScript script tags. https://pub.dartlang.org/packages/dart_to_js_script_rewriter
     http: ^0.11.1+9
     grid:
-      git: git@github.com:luckydimdim/grid.frontend.git
+      git: https://github.com/luckydimdim/grid.frontend.git
       #git: http://cm-ylng-msk-04/git/grid.frontend.git
     resources_loader:
-      git: git@github.com:luckydimdim/resources_loader.frontend.git
+      git: https://github.com/luckydimdim/resources_loader.frontend.git
       #git: http://cm-ylng-msk-04/git/resources_loader.frontend.git
     auth_router_outlet:
-      git: git@github.com:luckydimdim/auth_router_outlet.frontend.git
+      git: https://github.com/luckydimdim/auth_router_outlet.frontend.git
       #git: http://cm-ylng-msk-04/git/auth_router_outlet.frontend.git
     daterangepicker:
-      git: git@github.com:luckydimdim/daterangepicker.frontend.git
+      git: https://github.com/luckydimdim/daterangepicker.frontend.git
       #git: http://cm-ylng-msk-04/git/daterangepicker.frontend.git
       
 dev_dependencies:
