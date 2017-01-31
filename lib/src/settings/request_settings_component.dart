@@ -3,11 +3,12 @@ import 'dart:html';
 
 import 'package:angular2/core.dart';
 import 'package:angular2/router.dart';
-
+import 'package:js/js_util.dart';
+import 'package:js/js.dart';
 import 'package:resources_loader/resources_loader.dart';
 import 'package:grid/JsObjectConverter.dart';
 import 'package:grid/jq_grid.dart';
-import 'package:daterangepicker/daterangepicker.dart';
+import 'package:daterangepicker/daterangepicker.dart' as picker;
 
 @Component(
     selector: 'request-settings',
@@ -99,13 +100,27 @@ class RequestSettingsComponent implements OnInit, OnDestroy {
     DateRangeInit();
     WorksGridInit();
     MaterialsGridInit();
+
+    $('a[data-toggle="tab"]').on('shown.bs.tab', allowInterop(render));
   }
 
   void DateRangeInit() {
-    var options = new DateRangePickerOptions();
+    var options = new picker.DateRangePickerOptions();
 
-    new DateRangePicker(
+    new picker.DateRangePicker(
         this._resourcesLoaderService, '#request-date-range-picker', options);
+  }
+
+  void render(dynamic e) {
+    var target = getProperty(e, 'target');
+    var hash = getProperty(target, 'hash');
+
+    if (hash == '#works') {
+      $("#worksGrid").jqxTreeGrid('render');
+    }
+    else if (hash == '#materials') {
+      $("#materialsGrid").jqxTreeGrid('render');
+    }
   }
 
   Future WorksGridInit() async {
