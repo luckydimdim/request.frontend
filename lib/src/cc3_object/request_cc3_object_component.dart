@@ -42,7 +42,5 @@ class RequestCc3ObjectComponent implements AfterViewInit {
     _resourcesLoaderService.loadStyle(
         'vendor/bootstrap-daterangepicker/', 'daterangepicker.css');
 
-    _resourcesLoaderService.loadScript(
-        'packages/request/src/settings/', 'init-date-range.js', false);
   }
 }
