@@ -148,6 +148,9 @@ class RequestSettingsComponent implements OnInit, OnDestroy {
       ..dataField = 'Cost'
       ..text = 'Стоимость');
     columns.add(new Column()
+      ..dataField = 'UnitCost'
+      ..text = 'Стоимость ед измерения');
+    columns.add(new Column()
       ..dataField = 'Currency'
       ..text = 'Валюта');
     columns.add(new Column()
@@ -198,6 +201,9 @@ class RequestSettingsComponent implements OnInit, OnDestroy {
     columns.add(new Column()
       ..dataField = 'Cost'
       ..text = 'Стоимость');
+    columns.add(new Column()
+      ..dataField = 'UnitCost'
+      ..text = 'Стоимость ед измерения');
     columns.add(new Column()
       ..dataField = 'DeliveryDate'
       ..text = 'Дата поставки');
