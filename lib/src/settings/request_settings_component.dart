@@ -1,10 +1,12 @@
+import 'dart:async';
 import 'dart:html';
 
 import 'package:angular2/core.dart';
 import 'package:angular2/router.dart';
 
 import 'package:resources_loader/resources_loader.dart';
-import 'package:grid/grid.dart';
+import 'package:grid/JsObjectConverter.dart';
+import 'package:grid/jq_grid.dart';
 import 'package:daterangepicker/daterangepicker.dart';
 
 @Component(
@@ -22,8 +24,6 @@ class RequestSettingsComponent implements OnInit, OnDestroy {
   final Router _router;
   final ResourcesLoaderService _resourcesLoaderService;
 
-  Grid _materialsGrid;
-  Grid _worksGrid;
 
   RequestSettingsComponent(this._router, this._resourcesLoaderService) {}
 
@@ -35,21 +35,21 @@ class RequestSettingsComponent implements OnInit, OnDestroy {
 
     // TODO: Сделать более удобным переключение вкладок и показ/скрытие меню
     var oldActiveLink =
-        querySelector('.aside-menu .nav-tabs li a.active') as AnchorElement;
+    querySelector('.aside-menu .nav-tabs li a.active') as AnchorElement;
     oldActiveLink.classes.remove('active');
 
     var newActiveLink =
-        querySelector('.aside-menu .nav-tabs li a[href="#settings"]')
-            as AnchorElement;
+    querySelector('.aside-menu .nav-tabs li a[href="#settings"]')
+    as AnchorElement;
     newActiveLink.classes.add('active');
 
     var oldActivePanel =
-        querySelector('.aside-menu .tab-content div.active') as DivElement;
+    querySelector('.aside-menu .tab-content div.active') as DivElement;
     oldActivePanel.classes.remove('active');
 
     var newActivePanel =
-        querySelector('.aside-menu .tab-content div[id="settings"]')
-            as DivElement;
+    querySelector('.aside-menu .tab-content div[id="settings"]')
+    as DivElement;
     newActivePanel.classes.add('active');
 
     // TODO: Продумать управления содержимым бокового меню
@@ -98,7 +98,7 @@ class RequestSettingsComponent implements OnInit, OnDestroy {
 
     DateRangeInit();
     WorksGridInit();
-    //MaterialsGridInit(); // FIXME: перерисовывать таблицу при активации таба
+    MaterialsGridInit();
   }
 
   void DateRangeInit() {
@@ -108,92 +108,109 @@ class RequestSettingsComponent implements OnInit, OnDestroy {
         this._resourcesLoaderService, '#request-date-range-picker', options);
   }
 
-  void WorksGridInit() {
-    var showOptions = new ShowOptions()
-      ..columnHeaders = true
-      ..emptyRecords = true
-      ..selectColumn = true
-      ..header = false;
-
+  Future WorksGridInit() async {
     var columns = new List<Column>();
 
-    columns.add(
-        new Column(field: 'Code', caption: 'Код', size: '100px', frozen: true));
-    columns.add(new Column(
-        field: 'Name',
-        caption: 'Наименование этапа/работы',
-        size: '300px',
-        frozen: true));
+    columns.add(new Column()
+      ..dataField = 'Name'
+      ..text = 'Наименование этапа/работы'
+      ..pinned = true);
 
-    columns.add(new Column(
-        field: 'BeginDate', caption: 'Начало', size: '100px', render: 'date'));
-    columns.add(new Column(
-        field: 'EndDate', caption: 'Окончание', size: '100px', render: 'date'));
-    columns.add(new Column(field: 'Unit', caption: 'Ед. изм.', size: '100px'));
-    columns.add(new Column(field: 'Amount', caption: 'Объем', size: '100px'));
-    columns.add(new Column(field: 'Cost', caption: 'Стоимость', size: '100px'));
-    columns
-        .add(new Column(field: 'Currency', caption: 'Валюта', size: '100px'));
-    columns.add(new Column(
-        field: 'ContractorName', caption: 'Исполнитель', size: '200px'));
+    columns.add(new Column()
+      ..dataField = 'BeginDate'
+      ..cellsFormat = 'd'
+      ..text = 'Начало');
+    columns.add(new Column()
+      ..dataField = 'EndDate'
+      ..text = 'Окончание');
+    columns.add(new Column()
+      ..dataField = 'Unit'
+      ..text = 'Ед. изм.');
+    columns.add(new Column()
+      ..dataField = 'Amount'
+      ..text = 'Объем');
+    columns.add(new Column()
+      ..dataField = 'Cost'
+      ..text = 'Стоимость');
+    columns.add(new Column()
+      ..dataField = 'Currency'
+      ..text = 'Валюта');
+    columns.add(new Column()
+      ..dataField = 'ContractorName'
+      ..text = 'Исполнитель');
+
+    var hierarchy = new Hierarchy()
+      ..root = 'children';
+
+    var source = new SourceOptions()
+      ..url = 'packages/request/src/settings/works.json'
+      ..id = 'recid'
+      ..hierarchy = hierarchy
+      ..dataType = 'json';
 
     var options = new GridOptions()
-      ..name = 'worksGrid'
-      ..columns = columns
-      ..show = showOptions
-      ..url = '//cm-ylng-msk-01/cmas-backend/api/contract/1/works'
-      //..url = 'http://localhost:5000/api/contract/1/works'
-      ..method = 'GET';
+      ..checkboxes = true
+      ..source = source
+      ..height = null
+      ..editable = false
+      ..columns = columns;
 
-    _worksGrid = new Grid(this._resourcesLoaderService, "#worksGrid", options);
+    var _worksGrid = new jqGrid(this._resourcesLoaderService, "#worksGrid",
+        JsObjectConverter.convert(options));
+    await _worksGrid.Init();
   }
 
-  void MaterialsGridInit() {
+  Future MaterialsGridInit() async {
     var columns = new List<Column>();
 
-    columns.add(
-        new Column(field: 'Code', caption: 'Код', size: '100px', frozen: true));
-    columns.add(new Column(
-        field: 'Name',
-        caption: 'Наименование материалов',
-        size: '300px',
-        frozen: true));
+    columns.add(new Column()
+      ..dataField = 'Name'
+      ..text = 'Наименование материалов'
+      ..pinned = true);
 
-    columns.add(new Column(field: 'Unit', caption: 'Ед. изм.', size: '100px'));
-    columns
-        .add(new Column(field: 'Amount', caption: 'Количество', size: '100px'));
-    columns
-        .add(new Column(field: 'Currency', caption: 'Валюта', size: '100px'));
-    columns.add(new Column(
-        field: 'ObjectConstruction',
-        caption: 'Объект строительства',
-        size: '200px'));
-    columns.add(new Column(field: 'Cost', caption: 'Стоимость', size: '100px'));
-    columns.add(new Column(
-        field: 'DeliveryDate',
-        caption: 'Дата поставки',
-        size: '150px',
-        render: 'date'));
+    columns.add(new Column()
+      ..dataField = 'Unit'
+      ..text = 'Ед. изм.');
+    columns.add(new Column()
+      ..dataField = 'Amount'
+      ..text = 'Количество');
+    columns.add(new Column()
+      ..dataField = 'Currency'
+      ..text = 'Валюта');
+    columns.add(new Column()
+      ..dataField = 'ObjectConstruction'
+      ..text = 'Объект строительства');
+    columns.add(new Column()
+      ..dataField = 'Cost'
+      ..text = 'Стоимость');
+    columns.add(new Column()
+      ..dataField = 'DeliveryDate'
+      ..text = 'Дата поставки');
+
+    var hierarchy = new Hierarchy()
+      ..root = 'children';
+
+    var source = new SourceOptions()
+      ..url = 'packages/request/src/settings/materials.json'
+      ..id = 'recid'
+      ..hierarchy = hierarchy
+      ..dataType = 'json';
 
     var options = new GridOptions()
-      ..name = 'materialsGrid'
-      ..columns = columns
-      ..url = ' //cm-ylng-msk-01/cmas-backend/api/contract/1/materials'
-      //..url = 'http://localhost:5000/api/contract/1/materials'      
-      ..method = 'GET';
+      ..checkboxes = true
+      ..source = source
+      ..editable = false
+      ..height = null
+      ..columns = columns;
 
-    _materialsGrid =
-        new Grid(this._resourcesLoaderService, "#materialsGrid", options);
+    var _worksGrid = new jqGrid(this._resourcesLoaderService, "#materialsGrid",
+        JsObjectConverter.convert(options));
+
+    await _worksGrid.Init();
   }
 
   @override
   void ngOnDestroy() {
-    if (_materialsGrid != null) {
-      _materialsGrid.Destroy();
-    }
 
-    if (_worksGrid != null) {
-      _worksGrid.Destroy();
-    }
   }
 }
