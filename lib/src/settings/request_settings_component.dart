@@ -132,13 +132,6 @@ class RequestSettingsComponent implements OnInit, OnDestroy {
       ..pinned = true);
 
     columns.add(new Column()
-      ..dataField = 'BeginDate'
-      ..cellsFormat = 'd'
-      ..text = 'Начало');
-    columns.add(new Column()
-      ..dataField = 'EndDate'
-      ..text = 'Окончание');
-    columns.add(new Column()
       ..dataField = 'Unit'
       ..text = 'Ед. изм.');
     columns.add(new Column()
