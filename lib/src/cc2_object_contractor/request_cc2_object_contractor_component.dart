@@ -3,6 +3,8 @@ import 'dart:html';
 import 'package:angular2/core.dart';
 import 'package:angular2/router.dart';
 
+import 'package:intl/intl.dart';
+
 import 'package:resources_loader/resources_loader.dart';
 
 @Component(
@@ -51,6 +53,8 @@ class RequestCc2ObjectContractorComponent implements AfterViewInit, OnInit {
       });
     });
 
+    final formatter = new NumberFormat("#.##", "en_US");
+
     var table = querySelector('[calculation-table]') as TableElement;
     table.rows.forEach((TableRowElement row) {
       var priceCell = row.querySelector('[data-unit-price]') as TableCellElement;
@@ -61,7 +65,7 @@ class RequestCc2ObjectContractorComponent implements AfterViewInit, OnInit {
         quantityInput.onChange.listen((Event e) {
           var newQuantity = e.currentTarget as InputElement;
 
-          totalCell.innerHtml = (int.parse(priceCell.innerHtml, onError:(_) => 0) * int.parse(newQuantity.value, onError: (_) => 0)).toString() +' р.';
+          totalCell.innerHtml = '${formatter.format(int.parse(priceCell.innerHtml, onError:(_) => 0) * int.parse(newQuantity.value, onError: (_) => 0))} р.';
         });
       }
     });
