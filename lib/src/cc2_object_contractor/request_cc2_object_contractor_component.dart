@@ -54,7 +54,7 @@ class RequestCc2ObjectContractorComponent implements AfterViewInit, OnInit {
       });
     });
 
-    final formatter = new NumberFormat("#.##", "en_US");
+    final formatter = new NumberFormat('###,###.##', 'ru_RU');
 
     var table = querySelector('[calculation-table]') as TableElement;
     table.rows.forEach((TableRowElement row) {
