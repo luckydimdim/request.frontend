@@ -49,7 +49,8 @@ class RequestCc2ObjectContractorComponent implements AfterViewInit, OnInit {
     var printButtonList = querySelectorAll('[print-cc2]') as List<ButtonElement>;
     printButtonList.forEach((ButtonElement button) {
       button.onClick.listen((MouseEvent e) {
-        _router.parent.parent.navigateByUrl('/print-cc2');
+        //_router.parent.parent.navigateByUrl('/print-cc2');
+        window.open('/packages/request/src/cc2_object_contractor/cc2.pdf', '_blank');
       });
     });
 
