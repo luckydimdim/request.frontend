@@ -25,8 +25,26 @@ class RequestCc2ObjectComponent implements AfterViewInit, OnInit {
     String objectName = _routeParams.get('objectName');
   }
 
+  // import 'dart:html';
+  void breadcrumbInit(){
+    var  breadcrumbContent = querySelector('#breadcrumbContent') as DivElement;
+
+    if (breadcrumbContent == null)
+      return;
+
+    breadcrumbContent.innerHtml = '''
+            <li class="breadcrumb-item"><a href="#/master/dashboard">Главная</a></li>
+            <li class="breadcrumb-item"><a href="#/master/requestList">Список заявок</a></li>
+            <li class="breadcrumb-item"><a href="#/master/request">Создание заявки</a></li>
+            <li class="breadcrumb-item"><a href="#/master/request/cc-2">Акты КС-2</a></li>
+            <li class="breadcrumb-item active">Морской порт</li>
+    ''';
+  }
+
   @override
   void ngAfterViewInit() {
+    breadcrumbInit();
+
     // TODO: Продумать показ/скрытие меню
     document.body.classes.remove('mobile-open');
     document.body.classes.remove('aside-menu-open');
