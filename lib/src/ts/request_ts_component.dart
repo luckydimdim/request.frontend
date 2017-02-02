@@ -82,8 +82,31 @@ class RequestTsComponent implements AfterViewInit {
   void updateTable() {
     var table = querySelector('[time-sheet]') as TableElement;
 
-    int totalServiceRowIndex = 6;
-    int totalLeavesRowIndex = 10;
+    for (int colIndex = 1; colIndex < 32; ++colIndex) {
+      double colTotal = 0.0;
+
+      for (int rowIndex = 0; rowIndex < 6; ++rowIndex) {
+        TableCellElement currentCell = table.rows[rowIndex].cells[colIndex];
+
+        double currentValue = double.parse(currentCell.innerHtml, (_) => 0.0);
+        colTotal += currentValue;
+      }
+
+      table.rows[6].cells[colIndex].innerHtml = colTotal;
+    }
+
+    for (int colIndex = 1; colIndex < 32; ++colIndex) {
+      double colTotal = 0.0;
+
+      for (int rowIndex = 7; rowIndex < 10; ++rowIndex) {
+        TableCellElement currentCell = table.rows[rowIndex].cells[colIndex];
+
+        double currentValue = double.parse(currentCell.innerHtml, (_) => 0.0);
+        colTotal += currentValue;
+      }
+
+      table.rows[10].cells[colIndex].innerHtml = colTotal;
+    }
 
     for (int rowIndex = 0; rowIndex < table.rows.length; ++rowIndex) {
       double rowTotal = 0.0;
