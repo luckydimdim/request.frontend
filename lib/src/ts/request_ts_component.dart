@@ -39,13 +39,16 @@ class RequestTsComponent implements AfterViewInit {
     document.body.classes.remove('aside-menu-open');
 
     var table = querySelector('[time-sheet]') as TableElement;
+
     for (int rowIndex = 0; rowIndex < table.rows.length; ++rowIndex) {
-      for (int colIndex = 0; colIndex < table.rows[rowIndex].cells.length;
-      ++colIndex) {
+      for (int colIndex = 0; colIndex < table.rows[rowIndex].cells.length; ++colIndex) {
         if (colIndex == 0)
           continue;
 
         if (colIndex == table.rows[rowIndex].cells.length - 1)
+          continue;
+
+        if (rowIndex == 6 || rowIndex == 10)
           continue;
 
         TableCellElement currentCell = table.rows[rowIndex].cells[colIndex];
@@ -60,7 +63,7 @@ class RequestTsComponent implements AfterViewInit {
     var currentCell = e.currentTarget as TableCellElement;
     double currentValue = double.parse(currentCell.innerHtml, (_) => 0.0);
 
-    currentCell.innerHtml = currentValue + 1;
+    currentCell.innerHtml = (currentValue + 1).toString();
 
     updateTable();
   }
@@ -71,10 +74,13 @@ class RequestTsComponent implements AfterViewInit {
     var currentCell = e.currentTarget as TableCellElement;
     double currentValue = double.parse(currentCell.innerHtml, (_) => 0.0);
 
+    if (currentValue == 0)
+      currentCell.innerHtml = '';
+
     if (currentValue <= 0)
       return;
 
-    currentCell.innerHtml = currentValue - 0.5;
+    currentCell.innerHtml = (currentValue - 0.5).toString();
 
     updateTable();
   }
@@ -92,7 +98,7 @@ class RequestTsComponent implements AfterViewInit {
         colTotal += currentValue;
       }
 
-      table.rows[6].cells[colIndex].innerHtml = colTotal;
+      table.rows[6].cells[colIndex].innerHtml = colTotal.toString();
     }
 
     for (int colIndex = 1; colIndex < 32; ++colIndex) {
@@ -105,7 +111,7 @@ class RequestTsComponent implements AfterViewInit {
         colTotal += currentValue;
       }
 
-      table.rows[10].cells[colIndex].innerHtml = colTotal;
+      table.rows[10].cells[colIndex].innerHtml = colTotal.toString();
     }
 
     for (int rowIndex = 0; rowIndex < table.rows.length; ++rowIndex) {

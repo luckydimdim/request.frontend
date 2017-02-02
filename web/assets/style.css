@@ -8376,6 +8376,7 @@ base-chart.chart {
 
 .timesheet table.dates tr td:nth-child(n + 2) {
   min-width: 25px;
+  width: 25px;
   text-align: center;
   vertical-align: middle;
   border: 1px solid #000; }
@@ -8401,6 +8402,7 @@ base-chart.chart {
 
 .timesheet table.dates tr td:last-child {
   min-width: 40px;
+  width: 40px;
   border-left: 2px solid #000; }
 
 .timesheet table.bordered tr td {
