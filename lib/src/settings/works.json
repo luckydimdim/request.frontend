@@ -20,7 +20,7 @@
         "Unit": "часы",
         "Amount": 16,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "01.01.2017",
         "EndDate": "03.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -33,7 +33,7 @@
         "Unit": "часы",
         "Amount": 16,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "03.01.2017",
         "EndDate": "09.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -46,7 +46,7 @@
         "Unit": "часы",
         "Amount": 40,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "09.01.2017",
         "EndDate": "20.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -67,7 +67,7 @@
         "Unit": "часы",
         "Amount": 16,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "01.01.2017",
         "EndDate": "03.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -80,7 +80,7 @@
         "Unit": "часы",
         "Amount": 16,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "03.01.2017",
         "EndDate": "09.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -93,7 +93,7 @@
         "Unit": "часы",
         "Amount": 40,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "09.01.2017",
         "EndDate": "20.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -106,7 +106,7 @@
         "Unit": "часы",
         "Amount": 40,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "09.01.2017",
         "EndDate": "20.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -133,7 +133,7 @@
             "Unit": "часы",
             "Amount": 16,
             "Currency": "RUR",
-            "ObjectConstruction": "Жилой дом",
+            "ObjectConstruction": "Объект",
             "BeginDate": "03.01.2017",
             "EndDate": "09.01.2017",
             "ContractorName": "ООО Стройиндустрия"
@@ -146,7 +146,7 @@
             "Unit": "часы",
             "Amount": 16,
             "Currency": "RUR",
-            "ObjectConstruction": "Жилой дом",
+            "ObjectConstruction": "Объект",
             "BeginDate": "03.01.2017",
             "EndDate": "09.01.2017",
             "ContractorName": "ООО Стройиндустрия"
@@ -159,7 +159,7 @@
             "Unit": "часы",
             "Amount": 16,
             "Currency": "RUR",
-            "ObjectConstruction": "Жилой дом",
+            "ObjectConstruction": "Объект",
             "BeginDate": "03.01.2017",
             "EndDate": "09.01.2017",
             "ContractorName": "ООО Стройиндустрия"
@@ -172,7 +172,7 @@
             "Unit": "часы",
             "Amount": 16,
             "Currency": "RUR",
-            "ObjectConstruction": "Жилой дом",
+            "ObjectConstruction": "Объект",
             "BeginDate": "03.01.2017",
             "EndDate": "09.01.2017",
             "ContractorName": "ООО Стройиндустрия"
@@ -187,7 +187,7 @@
         "Unit": "часы",
         "Amount": 16,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "03.01.2017",
         "EndDate": "09.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -200,7 +200,7 @@
         "Unit": "часы",
         "Amount": 40,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "09.01.2017",
         "EndDate": "20.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -221,7 +221,7 @@
         "Unit": "часы",
         "Amount": 16,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "01.01.2017",
         "EndDate": "03.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -234,7 +234,7 @@
         "Unit": "часы",
         "Amount": 16,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "03.01.2017",
         "EndDate": "09.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -255,7 +255,7 @@
         "Unit": "часы",
         "Amount": 16,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "01.01.2017",
         "EndDate": "03.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -268,7 +268,7 @@
         "Unit": "часы",
         "Amount": 16,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "03.01.2017",
         "EndDate": "09.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -289,7 +289,7 @@
         "Unit": "часы",
         "Amount": 16,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "01.01.2017",
         "EndDate": "03.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -302,7 +302,7 @@
         "Unit": "часы",
         "Amount": 16,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "03.01.2017",
         "EndDate": "09.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -330,7 +330,7 @@
         "Unit": "часы",
         "Amount": 16,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "01.01.2017",
         "EndDate": "03.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -343,7 +343,7 @@
         "Unit": "часы",
         "Amount": 16,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "03.01.2017",
         "EndDate": "09.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -356,7 +356,7 @@
         "Unit": "часы",
         "Amount": 40,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "09.01.2017",
         "EndDate": "20.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -377,7 +377,7 @@
         "Unit": "часы",
         "Amount": 16,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "01.01.2017",
         "EndDate": "03.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -390,7 +390,7 @@
         "Unit": "часы",
         "Amount": 16,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "03.01.2017",
         "EndDate": "09.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -403,7 +403,7 @@
         "Unit": "часы",
         "Amount": 40,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "09.01.2017",
         "EndDate": "20.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -416,7 +416,7 @@
         "Unit": "часы",
         "Amount": 40,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "09.01.2017",
         "EndDate": "20.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -443,7 +443,7 @@
             "Unit": "часы",
             "Amount": 16,
             "Currency": "RUR",
-            "ObjectConstruction": "Жилой дом",
+            "ObjectConstruction": "Объект",
             "BeginDate": "03.01.2017",
             "EndDate": "09.01.2017",
             "ContractorName": "ООО Стройиндустрия"
@@ -456,7 +456,7 @@
             "Unit": "часы",
             "Amount": 16,
             "Currency": "RUR",
-            "ObjectConstruction": "Жилой дом",
+            "ObjectConstruction": "Объект",
             "BeginDate": "03.01.2017",
             "EndDate": "09.01.2017",
             "ContractorName": "ООО Стройиндустрия"
@@ -469,7 +469,7 @@
             "Unit": "часы",
             "Amount": 16,
             "Currency": "RUR",
-            "ObjectConstruction": "Жилой дом",
+            "ObjectConstruction": "Объект",
             "BeginDate": "03.01.2017",
             "EndDate": "09.01.2017",
             "ContractorName": "ООО Стройиндустрия"
@@ -482,7 +482,7 @@
             "Unit": "часы",
             "Amount": 16,
             "Currency": "RUR",
-            "ObjectConstruction": "Жилой дом",
+            "ObjectConstruction": "Объект",
             "BeginDate": "03.01.2017",
             "EndDate": "09.01.2017",
             "ContractorName": "ООО Стройиндустрия"
@@ -497,7 +497,7 @@
         "Unit": "часы",
         "Amount": 16,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "03.01.2017",
         "EndDate": "09.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -510,7 +510,7 @@
         "Unit": "часы",
         "Amount": 40,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "09.01.2017",
         "EndDate": "20.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -531,7 +531,7 @@
         "Unit": "часы",
         "Amount": 16,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "01.01.2017",
         "EndDate": "03.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -544,7 +544,7 @@
         "Unit": "часы",
         "Amount": 16,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "03.01.2017",
         "EndDate": "09.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -565,7 +565,7 @@
         "Unit": "часы",
         "Amount": 16,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "01.01.2017",
         "EndDate": "03.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -578,7 +578,7 @@
         "Unit": "часы",
         "Amount": 16,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "03.01.2017",
         "EndDate": "09.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -599,7 +599,7 @@
         "Unit": "часы",
         "Amount": 16,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "01.01.2017",
         "EndDate": "03.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -612,7 +612,7 @@
         "Unit": "часы",
         "Amount": 16,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "03.01.2017",
         "EndDate": "09.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -640,7 +640,7 @@
         "Unit": "часы",
         "Amount": 16,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "01.01.2017",
         "EndDate": "03.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -653,7 +653,7 @@
         "Unit": "часы",
         "Amount": 16,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "03.01.2017",
         "EndDate": "09.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -666,7 +666,7 @@
         "Unit": "часы",
         "Amount": 40,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "09.01.2017",
         "EndDate": "20.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -687,7 +687,7 @@
         "Unit": "часы",
         "Amount": 16,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "01.01.2017",
         "EndDate": "03.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -700,7 +700,7 @@
         "Unit": "часы",
         "Amount": 16,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "03.01.2017",
         "EndDate": "09.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -713,7 +713,7 @@
         "Unit": "часы",
         "Amount": 40,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "09.01.2017",
         "EndDate": "20.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -726,7 +726,7 @@
         "Unit": "часы",
         "Amount": 40,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "09.01.2017",
         "EndDate": "20.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -753,7 +753,7 @@
             "Unit": "часы",
             "Amount": 16,
             "Currency": "RUR",
-            "ObjectConstruction": "Жилой дом",
+            "ObjectConstruction": "Объект",
             "BeginDate": "03.01.2017",
             "EndDate": "09.01.2017",
             "ContractorName": "ООО Стройиндустрия"
@@ -766,7 +766,7 @@
             "Unit": "часы",
             "Amount": 16,
             "Currency": "RUR",
-            "ObjectConstruction": "Жилой дом",
+            "ObjectConstruction": "Объект",
             "BeginDate": "03.01.2017",
             "EndDate": "09.01.2017",
             "ContractorName": "ООО Стройиндустрия"
@@ -779,7 +779,7 @@
             "Unit": "часы",
             "Amount": 16,
             "Currency": "RUR",
-            "ObjectConstruction": "Жилой дом",
+            "ObjectConstruction": "Объект",
             "BeginDate": "03.01.2017",
             "EndDate": "09.01.2017",
             "ContractorName": "ООО Стройиндустрия"
@@ -792,7 +792,7 @@
             "Unit": "часы",
             "Amount": 16,
             "Currency": "RUR",
-            "ObjectConstruction": "Жилой дом",
+            "ObjectConstruction": "Объект",
             "BeginDate": "03.01.2017",
             "EndDate": "09.01.2017",
             "ContractorName": "ООО Стройиндустрия"
@@ -807,7 +807,7 @@
         "Unit": "часы",
         "Amount": 16,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "03.01.2017",
         "EndDate": "09.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -820,7 +820,7 @@
         "Unit": "часы",
         "Amount": 40,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "09.01.2017",
         "EndDate": "20.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -841,7 +841,7 @@
         "Unit": "часы",
         "Amount": 16,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "01.01.2017",
         "EndDate": "03.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -854,7 +854,7 @@
         "Unit": "часы",
         "Amount": 16,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "03.01.2017",
         "EndDate": "09.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -875,7 +875,7 @@
         "Unit": "часы",
         "Amount": 16,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "01.01.2017",
         "EndDate": "03.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -888,7 +888,7 @@
         "Unit": "часы",
         "Amount": 16,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "03.01.2017",
         "EndDate": "09.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -909,7 +909,7 @@
         "Unit": "часы",
         "Amount": 16,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "01.01.2017",
         "EndDate": "03.01.2017",
         "ContractorName": "ООО Стройиндустрия"
@@ -922,7 +922,7 @@
         "Unit": "часы",
         "Amount": 16,
         "Currency": "RUR",
-        "ObjectConstruction": "Жилой дом",
+        "ObjectConstruction": "Объект",
         "BeginDate": "03.01.2017",
         "EndDate": "09.01.2017",
         "ContractorName": "ООО Стройиндустрия"
