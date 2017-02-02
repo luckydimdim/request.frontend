@@ -8545,10 +8545,6 @@ base-chart.chart {
   width: 513px;
 }
 
-.timesheet table.dates tr td {
-  /*border: 1px solid #000;*/
-}
-
 .timesheet table.dates tr td:nth-child(n + 2) {
   min-width: 25px;
   text-align: center;
@@ -8606,4 +8602,29 @@ base-chart.chart {
   width: 50%;
   text-align: center;
   font-weight: bold;
+}
+
+.timesheet .single {
+  width: 513px;
+}
+
+.timesheet tr.bordered-sm td {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.timesheet tr.bordered-t-sm td {
+  border-top: 1px solid #000;
+}
+
+.timesheet tr.bordered-b-sm td {
+  border-bottom: 1px solid #000;
+}
+
+.timesheet td.bordered-r-g-sm {
+  border-right: 1px solid #d1d4d7;
+}
+
+.timesheet td.bordered-l-g-sm {
+  border-left: 1px solid #d1d4d7;
 }
