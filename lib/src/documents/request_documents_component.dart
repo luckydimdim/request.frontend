@@ -3,21 +3,21 @@ import 'package:angular2/core.dart';
 import 'package:angular2/router.dart';
 
 @Component(
-    selector: 'request-document-list',
-    templateUrl: 'request_document_list_component.html',
+    selector: 'request-documents',
+    templateUrl: 'request_documents_component.html',
     directives: const [RouterLink])
-class RequestDocumentListComponent implements OnInit {
-  static const String route_name = 'RequestDocumentList';
-  static const String route_path = 'document-list';
+class RequestDocumentsComponent implements OnInit {
+  static const String route_name = 'RequestDocuments';
+  static const String route_path = 'documents';
   static const Route route = const Route(
-      path: RequestDocumentListComponent.route_path,
-      component: RequestDocumentListComponent,
-      name: RequestDocumentListComponent.route_name);
+      path: RequestDocumentsComponent.route_path,
+      component: RequestDocumentsComponent,
+      name: RequestDocumentsComponent.route_name);
 
   final Router _router;
   final RouteParams _routeParams;
 
-  RequestDocumentListComponent(this._router, this._routeParams) {}
+  RequestDocumentsComponent(this._router, this._routeParams) {}
 
   @override
   void ngOnInit() {

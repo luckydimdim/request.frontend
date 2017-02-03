@@ -4,7 +4,9 @@ import 'package:angular2/core.dart';
 import 'package:angular2/router.dart';
 
 @Component(
-    selector: 'request-summary', templateUrl: 'request_summary_component.html')
+  selector: 'request-summary',
+  templateUrl: 'request_summary_component.html',
+  directives: const [RouterLink])
 class RequestSummaryComponent implements AfterViewInit {
   static const String route_name = 'RequestSummary';
   static const String route_path = 'summary';
@@ -28,8 +30,8 @@ class RequestSummaryComponent implements AfterViewInit {
             <li class="breadcrumb-item"><a href="#/master/dashboard">Главная</a></li>
             <li class="breadcrumb-item"><a href="#/master/requestList">Список заявок</a></li>
             <li class="breadcrumb-item"><a href="#/master/request">Создание заявки</a></li>
-            <li class="breadcrumb-item"><a href="#/master/request/document-list">Первичная документация</a></li>
-            <li class="breadcrumb-item active">Итого</li>
+            <li class="breadcrumb-item"><a href="#/master/request/documents">Первичная документация</a></li>
+            <li class="breadcrumb-item active">Итог</li>
     ''';
   }
 

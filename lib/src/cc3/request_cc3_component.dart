@@ -37,7 +37,7 @@ class RequestCc3Component implements AfterViewInit {
             <li class="breadcrumb-item"><a href="#/master/dashboard">Главная</a></li>
             <li class="breadcrumb-item"><a href="#/master/requestList">Список заявок</a></li>
             <li class="breadcrumb-item"><a href="#/master/request">Создание заявки</a></li>
-            <li class="breadcrumb-item"><a href="#/master/request/document-list">Первичная документация</a></li>
+            <li class="breadcrumb-item"><a href="#/master/request/documents">Первичная документация</a></li>
             <li class="breadcrumb-item"><a href="#/master/request/cc-3">Справка КС-3 по оюъекту &laquo;Морской порт&raquo;</a></li>
             <li class="breadcrumb-item active">Морской порт</li>
     ''';

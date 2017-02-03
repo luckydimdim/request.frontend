@@ -7,18 +7,18 @@
         </div>
         <div class="card-block">
           <div class="row">
-            <div class="col-md-3">
-              <div class="font-weight-bold">
+            <div class="col-md-3 align-self-end">
+              <div class="font-weight-bold mt-1">
                 <span class="text-uppercase mb-q">Работы</span>
               </div>
               <div>
                   <span>
-                    <small>Выбрано работ  <span class="text-muted">.....................................................................................</span>  576</small>
+                    <small>Выбрано работ  <span class="text-muted">....................................................................................................</span>  576</small>
                   </span>
               </div>
               <div>
                   <span>
-                    <small>На сумму  <span class="text-muted">..................................................................................................</span>  $ 43 000</small>
+                    <small>На сумму  <span class="text-muted">.................................................................................................................</span>  $ 43 000</small>
                   </span>
               </div>
               <div>
@@ -31,85 +31,27 @@
               </div>
               <div>
                   <span>
-                    <small>Выбрано материалов  <span class="text-muted">.........................................................................</span>  576</small>
+                    <small>Выбрано материалов  <span class="text-muted">........................................................................................</span>  576</small>
                   </span>
               </div>
               <div>
                   <span>
-                    <small>На сумму  <span class="text-muted">..................................................................................................</span>  $ 43 000</small>
+                    <small>На сумму  <span class="text-muted">.................................................................................................................</span>  $ 43 000</small>
                   </span>
               </div>
               <div>
                 <a href="#" class="font-xs">Изменить</a>
               </div>
-
-              <br/><br/><br/><br/><br/>
-              <div>
-                <div class="text-uppercase mb-q">
-                  <small><b>Показатель 1</b></small>
-                </div>
-                <progress class="progress progress-xs progress-info m-0" value="100" max="100">100%
-                </progress>
-                <small class="text-muted">100% (1 000 000)</small>
-
-                <div class="text-uppercase mb-q">
-                  <small><b>Показатель 2</b></small>
-                </div>
-                <progress class="progress progress-xs progress-warning m-0" value="50" max="100">50%
-                </progress>
-                <small class="text-muted">100% (1 000 000)</small>
-
-                <div class="text-uppercase mb-q">
-                  <small><b>Показатель 3</b></small>
-                </div>
-                <progress class="progress progress-xs progress-danger m-0" value="70" max="100">70%
-                </progress>
-                <small class="text-muted">100% (1 000 000)</small>
-              </div>
-
-              <br/><br/><br/><br/><br/><br/>
-
-              <a [routerLink]="['RequestDocumentList']">
-                <button type="button" class="btn btn-outline-warning ml-1 mb-2"><i class="icon-magic-wand"></i>&nbsp;
+              <div class="mt-3">
+                <button type="button" class="btn btn-outline-warning"><i class="fa fa-save"></i>&nbsp;
                   Сохранить
                 </button>
-              </a>
-              <a [routerLink]="['RequestDocumentList']">
-                <button type="button" class="btn btn-outline-success ml-1 mb-2"><i class="icon-magic-wand"></i>&nbsp;
-                  Отправить
-                </button>
-              </a>
-
-              <!--<div class="card">
-                <div class="card-header ">
-                  <div class="font-weight-bold">
-                    <span class="h4">Материалы</span>
-                  </div>
-                  <div>
-            <span>
-              <small>Выбрано материалов</small>
-            </span>
-                    <span class="float-xs-right">
-              <small>345</small>
-            </span>
-                  </div>
-                  <div>
-            <span>
-              <small>На сумму</small>
-            </span>
-                    <span class="float-xs-right">
-              <small>$ 13 000</small>
-            </span>
-                  </div>
-                </div>
-                <div class="card-block py-1 px-1">
-                  <div>
-                    <a href="#/master/request/settings">
-                      <button type="button" class="btn btn-secondary">Открыть список материалов</button>
-                    </a>
-                  </div>
-                </div>
-              </div>-->
+                <a [routerLink]="['RequestSummary']">
+                  <button type="button" class="btn btn-outline-success ml-1"><i class="icon-action-redo"></i>&nbsp;
+                    Отправить на согласование
+                  </button>
+                </a>
+              </div>
             </div>
             <!--./col-->
             <div class="col-md-3">
