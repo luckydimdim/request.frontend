@@ -1,118 +1,223 @@
 <div class="animated fadeIn">
   <div class="row">
-    <div class="col-md-5">
+    <div class="col-md-12">
       <div class="card">
-        <div class="card-block p-1 clearfix">
-          <i class="fa fa-cubes bg-info p-1 font-2xl mr-1 float-xs-left"></i>
-          <a class="h5 text-primary mb-0 mt-h" [routerLink]="['RequestCc2ObjectContractor', {'objectName': 'sea-port', 'contractorName': 'some-company'}]">Акт КС-2</a>
-          <div class="text-muted text-uppercase font-weight-bold font-xs">Объект &laquo;Морской порт&raquo;</div>
-          <div class="text-muted text-uppercase font-weight-bold font-xs">Подрядчик &laquo;Подрядчик раз два три&raquo;</div>
+        <div class="card-header">
+          <i class="fa fa-files-o"></i> Первичная документация
         </div>
-      </div>
-      <div class="card">
-        <div class="card-block p-1 clearfix">
-          <i class="fa fa-cubes bg-info p-1 font-2xl mr-1 float-xs-left"></i>
-          <a class="h5 text-primary mb-0 mt-h" [routerLink]="['RequestCc2ObjectContractor', {'objectName': 'sea-port', 'contractorName': 'some-company'}]">Акт КС-2</a>
-          <div class="text-muted text-uppercase font-weight-bold font-xs">Объект &laquo;Морской порт&raquo;</div>
-          <div class="text-muted text-uppercase font-weight-bold font-xs">Подрядчик &laquo;Другой подрядчик&raquo;</div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-block p-1 clearfix">
-          <i class="fa fa-cubes bg-info p-1 font-2xl mr-1 float-xs-left"></i>
-          <a class="h5 text-primary mb-0 mt-h" [routerLink]="['RequestCc2ObjectContractor', {'objectName': 'sea-port', 'contractorName': 'some-company'}]">Акт КС-2</a>
-          <div class="text-muted text-uppercase font-weight-bold font-xs">Объект &laquo;Резервуары хранения конденсата&raquo;</div>
-          <div class="text-muted text-uppercase font-weight-bold font-xs">Подрядчик &laquo;Подрядчик раз два трик&raquo;</div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-block p-1 clearfix">
-          <i class="fa fa-money bg-info p-1 font-2xl mr-1 float-xs-left"></i>
-          <a class="h5 text-primary mb-0 mt-h" [routerLink]="['RequestCc3Object', {'objectName': 'sea-port'}]">Справка КС-3</a>
-          <div class="text-muted text-uppercase font-weight-bold font-xs">Объект &laquo;Морской порт&raquo;</div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-block p-1 clearfix">
-          <i class="fa fa-money bg-info p-1 font-2xl mr-1 float-xs-left"></i>
-          <a class="h5 text-primary mb-0 mt-h" [routerLink]="['RequestCc3Object', {'objectName': 'sea-port'}]">Справка КС-3</a>
-          <div class="text-muted text-uppercase font-weight-bold font-xs">Объект &laquo;Резервуары хранения конденсата&raquo;</div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-block p-1 clearfix">
-          <i class="fa fa-clock-o bg-info p-1 font-2xl mr-1 float-xs-left"></i>
-          <a class="h5 text-primary mb-0 mt-h" [routerLink]="['RequestTs']">Табель учета рабочего времени</a>
-          <div class="text-muted text-uppercase font-weight-bold font-xs">Объект &laquo;Резервуары хранения конденсата&raquo;</div>
-          <div class="text-muted text-uppercase font-weight-bold font-xs">Muhammad Ichsan</div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-block p-1 clearfix">
-          <i class="fa fa-clock-o bg-info p-1 font-2xl mr-1 float-xs-left"></i>
-          <a class="h5 text-primary mb-0 mt-h" [routerLink]="['RequestTs']">Табель учета рабочего времени</a>
-          <div class="text-muted text-uppercase font-weight-bold font-xs">Объект &laquo;Резервуары хранения конденсата&raquo;</div>
-          <div class="text-muted text-uppercase font-weight-bold font-xs">Dedi Setiawan</div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card">
-        <div class="card-header card-header-inverse card-header-primary">
-          <div class="font-weight-bold">
-            <span class="h4">Работы</span>
-          </div>
-          <div>
-            <span>
-              <small>Выбрано работ</small>
-            </span>
-            <span class="float-xs-right">
-              <small>576</small>
-            </span>
-          </div>
-          <div>
-            <span>
-              <small>На сумму</small>
-            </span>
-            <span class="float-xs-right">
-              <small>$ 43 000</small>
-            </span>
-          </div>
-        </div>
-        <div class="card-block py-1 px-1">
-          <div>
-            <a href="#/master/request/settings"><button type="button" class="btn btn-secondary">Открыть список работ</button></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card">
-        <div class="card-header card-header-inverse card-header-danger">
-          <div class="font-weight-bold">
-            <span class="h4">Материалы</span>
-          </div>
-          <div>
+        <div class="card-block">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="font-weight-bold">
+                <span class="text-uppercase mb-q">Работы</span>
+              </div>
+              <div>
+                  <span>
+                    <small>Выбрано работ  <span class="text-muted">.....................................................................................</span>  576</small>
+                  </span>
+              </div>
+              <div>
+                  <span>
+                    <small>На сумму  <span class="text-muted">..................................................................................................</span>  $ 43 000</small>
+                  </span>
+              </div>
+              <div>
+                <a href="#" class="font-xs">Изменить</a>
+              </div>
+
+
+              <div class="font-weight-bold mt-2">
+                <span class="text-uppercase mb-q">Материалы</span>
+              </div>
+              <div>
+                  <span>
+                    <small>Выбрано материалов  <span class="text-muted">.........................................................................</span>  576</small>
+                  </span>
+              </div>
+              <div>
+                  <span>
+                    <small>На сумму  <span class="text-muted">..................................................................................................</span>  $ 43 000</small>
+                  </span>
+              </div>
+              <div>
+                <a href="#" class="font-xs">Изменить</a>
+              </div>
+
+              <br/><br/><br/><br/><br/>
+              <div>
+                <div class="text-uppercase mb-q">
+                  <small><b>Показатель 1</b></small>
+                </div>
+                <progress class="progress progress-xs progress-info m-0" value="100" max="100">100%
+                </progress>
+                <small class="text-muted">100% (1 000 000)</small>
+
+                <div class="text-uppercase mb-q">
+                  <small><b>Показатель 2</b></small>
+                </div>
+                <progress class="progress progress-xs progress-warning m-0" value="50" max="100">50%
+                </progress>
+                <small class="text-muted">100% (1 000 000)</small>
+
+                <div class="text-uppercase mb-q">
+                  <small><b>Показатель 3</b></small>
+                </div>
+                <progress class="progress progress-xs progress-danger m-0" value="70" max="100">70%
+                </progress>
+                <small class="text-muted">100% (1 000 000)</small>
+              </div>
+
+              <br/><br/><br/><br/><br/><br/>
+
+              <a [routerLink]="['RequestDocumentList']">
+                <button type="button" class="btn btn-outline-warning ml-1 mb-2"><i class="icon-magic-wand"></i>&nbsp;
+                  Сохранить
+                </button>
+              </a>
+              <a [routerLink]="['RequestDocumentList']">
+                <button type="button" class="btn btn-outline-success ml-1 mb-2"><i class="icon-magic-wand"></i>&nbsp;
+                  Отправить
+                </button>
+              </a>
+
+              <!--<div class="card">
+                <div class="card-header ">
+                  <div class="font-weight-bold">
+                    <span class="h4">Материалы</span>
+                  </div>
+                  <div>
             <span>
               <small>Выбрано материалов</small>
             </span>
-            <span class="float-xs-right">
+                    <span class="float-xs-right">
               <small>345</small>
             </span>
-          </div>
-          <div>
+                  </div>
+                  <div>
             <span>
               <small>На сумму</small>
             </span>
-            <span class="float-xs-right">
+                    <span class="float-xs-right">
               <small>$ 13 000</small>
             </span>
+                  </div>
+                </div>
+                <div class="card-block py-1 px-1">
+                  <div>
+                    <a href="#/master/request/settings">
+                      <button type="button" class="btn btn-secondary">Открыть список материалов</button>
+                    </a>
+                  </div>
+                </div>
+              </div>-->
+            </div>
+            <!--./col-->
+            <div class="col-md-3">
+              <h5 class="text-muted">
+                Акты КС-2
+              </h5>
+              <div class="card">
+                <div class="card-block p-1 clearfix">
+                  <i class="fa fa-cubes bg-info p-1 font-2xl mr-1 float-xs-left"></i>
+                  <i class="icon-check text-primary float-xs-right font-2xl"></i>
+                  <a class="h5 text-primary mb-0 mt-h"
+                     [routerLink]="['RequestCc2', {'objectName': 'sea-port', 'contractorName': 'some-company'}]">Морской
+                    порт</a>
+                  <div class="text-muted text-uppercase font-weight-bold font-xs">Подрядчик раз два три</div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-block p-1 clearfix">
+                  <i class="fa fa-cubes bg-info p-1 font-2xl mr-1 float-xs-left"></i>
+                  <a class="h5 text-primary mb-0 mt-h"
+                     [routerLink]="['RequestCc2', {'objectName': 'sea-port', 'contractorName': 'some-company'}]">Морской
+                    порт</a>
+                  <div class="text-muted text-uppercase font-weight-bold font-xs">Другой подрядчик</div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-block p-1 clearfix">
+                  <i class="fa fa-cubes bg-info p-1 font-2xl mr-1 float-xs-left"></i>
+                  <a class="h5 text-primary mb-0 mt-h"
+                     [routerLink]="['RequestCc2', {'objectName': 'sea-port', 'contractorName': 'some-company'}]">Резервуары
+                    хранения конденсата</a>
+                  <div class="text-muted text-uppercase font-weight-bold font-xs">Подрядчик раз два три</div>
+                </div>
+              </div>
+            </div>
+            <!--./col-->
+            <div class="col-md-3">
+              <h5 class="text-muted">
+                Справки КС-3
+              </h5>
+              <div class="card">
+                <div class="card-block p-1 clearfix">
+                  <i class="fa fa-money bg-warning p-1 font-2xl mr-1 float-xs-left"></i>
+                  <a class="h5 text-warning mb-0 mt-h" [routerLink]="['RequestCc3', {'objectName': 'sea-port'}]">Морской
+                    порт</a>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-block p-1 clearfix">
+                  <i class="fa fa-money bg-warning p-1 font-2xl mr-1 float-xs-left"></i>
+                  <a class="h5 text-warning mb-0 mt-h" [routerLink]="['RequestCc3', {'objectName': 'sea-port'}]">Резервуары
+                    хранения конденсата</a>
+                </div>
+              </div>
+            </div>
+            <!--./col-->
+            <div class="col-md-3">
+              <h5 class="text-muted">
+                Табели учета рабочего времени
+              </h5>
+              <div class="card">
+                <div class="card-block p-1 clearfix">
+                  <i class="fa fa-clock-o bg-success p-1 font-2xl mr-1 float-xs-left"></i>
+                  <i class="icon-check text-success float-xs-right font-2xl"></i>
+                  <a class="h5 text-success mb-0 mt-h" [routerLink]="['RequestTs']">Muhammad Ichsan</a>
+                  <div class="text-muted text-uppercase font-weight-bold font-xs">Резервуары хранения конденсата</div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-block p-1 clearfix">
+                  <i class="fa fa-clock-o bg-success p-1 font-2xl mr-1 float-xs-left"></i>
+                  <i class="icon-check text-success float-xs-right font-2xl"></i>
+                  <a class="h5 text-success mb-0 mt-h" [routerLink]="['RequestTs']">Dedi Setiawan</a>
+                  <div class="text-muted text-uppercase font-weight-bold font-xs">Резервуары хранения конденсата</div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-block p-1 clearfix">
+                  <i class="fa fa-clock-o bg-success p-1 font-2xl mr-1 float-xs-left"></i>
+                  <a class="h5 text-success mb-0 mt-h" [routerLink]="['RequestTs']">Muhammad Ichsan</a>
+                  <div class="text-muted text-uppercase font-weight-bold font-xs">Резервуары хранения конденсата</div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-block p-1 clearfix">
+                  <i class="fa fa-clock-o bg-success p-1 font-2xl mr-1 float-xs-left"></i>
+                  <a class="h5 text-success mb-0 mt-h" [routerLink]="['RequestTs']">Dedi Setiawan</a>
+                  <div class="text-muted text-uppercase font-weight-bold font-xs">Резервуары хранения конденсата</div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-block p-1 clearfix">
+                  <i class="fa fa-clock-o bg-success p-1 font-2xl mr-1 float-xs-left"></i>
+                  <a class="h5 text-success mb-0 mt-h" [routerLink]="['RequestTs']">Muhammad Ichsan</a>
+                  <div class="text-muted text-uppercase font-weight-bold font-xs">Резервуары хранения конденсата</div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-block p-1 clearfix">
+                  <i class="fa fa-clock-o bg-success p-1 font-2xl mr-1 float-xs-left"></i>
+                  <a class="h5 text-success mb-0 mt-h" [routerLink]="['RequestTs']">Muhammad Ichsan</a>
+                  <div class="text-muted text-uppercase font-weight-bold font-xs">Резервуары хранения конденсата</div>
+                </div>
+              </div>
+            </div>
+            <!--./col-->
           </div>
-        </div>
-        <div class="card-block py-1 px-1">
-          <div>
-            <a href="#/master/request/settings"><button type="button" class="btn btn-secondary">Открыть список материалов</button></a>
-          </div>
+          <!--./row-->
         </div>
       </div>
     </div>

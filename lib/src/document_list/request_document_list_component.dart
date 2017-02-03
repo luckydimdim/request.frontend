@@ -33,8 +33,7 @@ class RequestDocumentListComponent implements OnInit {
     breadcrumbContent.innerHtml = '''
             <li class="breadcrumb-item"><a href="#/master/dashboard">Главная</a></li>
             <li class="breadcrumb-item"><a href="#/master/requestList">Список заявок</a></li>
-            <li class="breadcrumb-item"><a href="#/master/request">Создание заявки</a></li>
-            <li class="breadcrumb-item"><a href="#/master/request/settings">Работы и материалы</a></li>
+            <li class="breadcrumb-item"><a href="#/master/request">Создание заявки</a></li>            
             <li class="breadcrumb-item active">Первичная документация</li>
     ''';
   }

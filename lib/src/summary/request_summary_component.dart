@@ -28,6 +28,7 @@ class RequestSummaryComponent implements AfterViewInit {
             <li class="breadcrumb-item"><a href="#/master/dashboard">Главная</a></li>
             <li class="breadcrumb-item"><a href="#/master/requestList">Список заявок</a></li>
             <li class="breadcrumb-item"><a href="#/master/request">Создание заявки</a></li>
+            <li class="breadcrumb-item"><a href="#/master/request/document-list">Первичная документация</a></li>
             <li class="breadcrumb-item active">Итого</li>
     ''';
   }
