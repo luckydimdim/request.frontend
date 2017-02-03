@@ -9,6 +9,7 @@ import 'cc3/request_cc3_component.dart';
 import 'cc3_object/request_cc3_object_component.dart';
 import 'summary/request_summary_component.dart';
 import 'ts/request_ts_component.dart';
+import 'document_list/request_document_list_component.dart';
 
 @Component(
     selector: 'request',
@@ -22,8 +23,8 @@ import 'ts/request_ts_component.dart';
   RequestCc3Component.route,
   RequestCc3ObjectComponent.route,
   RequestSummaryComponent.route,
-  RequestTsComponent.route
-])
+  RequestTsComponent.route,
+  RequestDocumentListComponent.route])
 class RequestComponent implements AfterViewInit {
   static const String route_name = 'Request';
   static const String route_path = 'request/...';

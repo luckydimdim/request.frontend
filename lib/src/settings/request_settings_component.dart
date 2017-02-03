@@ -8,12 +8,12 @@ import 'package:js/js.dart';
 import 'package:resources_loader/resources_loader.dart';
 import 'package:grid/JsObjectConverter.dart';
 import 'package:grid/jq_grid.dart';
-import 'package:daterangepicker/daterangepicker.dart' as picker;
 
 @Component(
     selector: 'request-settings',
-    templateUrl: 'request_settings_component.html')
-class RequestSettingsComponent implements OnInit, OnDestroy {
+    templateUrl: 'request_settings_component.html',
+    directives: const [RouterLink])
+class RequestSettingsComponent implements OnInit {
   static const String route_name = 'RequestSettings';
   static const String route_path = 'settings';
   static const Route route = const Route(
@@ -25,10 +25,8 @@ class RequestSettingsComponent implements OnInit, OnDestroy {
   final Router _router;
   final ResourcesLoaderService _resourcesLoaderService;
 
-
   RequestSettingsComponent(this._router, this._resourcesLoaderService) {}
 
-  // import 'dart:html';
   void breadcrumbInit(){
     var  breadcrumbContent = querySelector('#breadcrumbContent') as DivElement;
 
@@ -46,7 +44,6 @@ class RequestSettingsComponent implements OnInit, OnDestroy {
   @override
   void ngOnInit() {
     breadcrumbInit();
-
 
     // TODO: Продумать показ/скрытие меню
     document.body.classes.add('mobile-open');
@@ -91,18 +88,6 @@ class RequestSettingsComponent implements OnInit, OnDestroy {
       placeholder="Договор"/>
       </div>
       </div>
-      <div class="form-group">
-      <div class="input-group">
-      <span class="input-group-addon"><i
-      class="fa fa-calendar"></i>
-      </span>
-      <input date-range-picker="" id="request-date-range-picker"
-      placeholder="Период"
-      class="form-control date-picker ng-pristine ng-valid ng-isolate-scope ng-not-empty ng-touched"
-      type="text" ng-model="date" options="opts"
-      style=""/>
-      </div>
-      </div>
       <div class="form-group form-actions">
       <button type="submit" class="btn btn-sm btn-success">
       Показать работы и материалы
@@ -115,18 +100,10 @@ class RequestSettingsComponent implements OnInit, OnDestroy {
 
     newActivePanel.innerHtml = htmlElement;
 
-    DateRangeInit();
     WorksGridInit();
     MaterialsGridInit();
 
     $('a[data-toggle="tab"]').on('shown.bs.tab', allowInterop(render));
-  }
-
-  void DateRangeInit() {
-    var options = new picker.DateRangePickerOptions();
-
-    new picker.DateRangePicker(
-        this._resourcesLoaderService, '#request-date-range-picker', options);
   }
 
   void render(dynamic e) {
@@ -239,10 +216,5 @@ class RequestSettingsComponent implements OnInit, OnDestroy {
         JsObjectConverter.convert(options));
 
     await _worksGrid.Init();
-  }
-
-  @override
-  void ngOnDestroy() {
-
   }
 }
