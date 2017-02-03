@@ -11,46 +11,29 @@
               <div class="font-weight-bold mt-1">
                 <span class="text-uppercase mb-q">Работы</span>
               </div>
-              <div>
-                  <span>
-                    <small>Выбрано работ  <span class="text-muted">....................................................................................................</span>  576</small>
-                  </span>
-              </div>
-              <div>
-                  <span>
-                    <small>На сумму  <span class="text-muted">.................................................................................................................</span>  $ 43 000</small>
-                  </span>
-              </div>
-              <div>
-                <a href="#" class="font-xs">Изменить</a>
-              </div>
-
+              <ul class="leaders font-xs mb-0">
+                <li><span>Выбрано работ</span> <span>576</span></li>
+                <li><span>На сумму</span><span>$43 000</span></li>
+              </ul>
+              <a href="#" class="font-xs">Изменить</a>
 
               <div class="font-weight-bold mt-2">
                 <span class="text-uppercase mb-q">Материалы</span>
               </div>
-              <div>
-                  <span>
-                    <small>Выбрано материалов  <span class="text-muted">........................................................................................</span>  576</small>
-                  </span>
-              </div>
-              <div>
-                  <span>
-                    <small>На сумму  <span class="text-muted">.................................................................................................................</span>  $ 43 000</small>
-                  </span>
-              </div>
+              <ul class="leaders font-xs mb-0">
+                <li><span>Выбрано материалов</span> <span>273</span></li>
+                <li><span>На сумму</span><span>$2 000</span></li>
+              </ul>
               <div>
                 <a href="#" class="font-xs">Изменить</a>
               </div>
               <div class="mt-3">
-                <button type="button" class="btn btn-outline-warning"><i class="fa fa-save"></i>&nbsp;
+                <button type="button" class="btn btn-outline-warning btn-block"><i class="fa fa-save"></i>&nbsp;
                   Сохранить
                 </button>
-                <a [routerLink]="['RequestSummary']">
-                  <button type="button" class="btn btn-outline-success ml-1"><i class="icon-action-redo"></i>&nbsp;
-                    Отправить на согласование
-                  </button>
-                </a>
+                <button type="button" class="btn btn-outline-success btn-block mt-1" btn-aprove><i class="icon-action-redo"></i>&nbsp;
+                  Отправить на согласование
+                </button>
               </div>
             </div>
             <!--./col-->

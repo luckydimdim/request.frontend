@@ -41,5 +41,10 @@ class RequestSummaryComponent implements AfterViewInit {
 
     document.body.classes.remove('mobile-open');
     document.body.classes.remove('aside-menu-open');
+
+    var button = querySelector('[btn-back]') as ButtonElement;
+    button.onClick.listen((MouseEvent e) {
+      _router.navigate(['RequestDocuments']);
+    });
   }
 }

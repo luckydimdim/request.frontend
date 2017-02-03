@@ -1,3 +1,5 @@
+/** TIME SHEET **/
+
 .timesheet .card-block {
   border-top: 1px solid #d1d4d7;
 }
@@ -118,3 +120,39 @@
 .timesheet td.bordered-l-g-sm {
   border-left: 1px solid #d1d4d7;
 }
+
+/** /TIME SHEET **/
+
+/** DOTS **/
+
+ul.leaders {
+  max-width: 40em;
+  padding: 0;
+  overflow-x: hidden;
+  list-style: none
+}
+
+ul.leaders li:before {
+  color: gray;
+  float: left;
+  width: 0;
+  white-space: nowrap;
+  content:
+    ". . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . "
+}
+
+ul.leaders span:first-child {
+  padding-right: 0.33em;
+  background: white
+}
+
+ul.leaders span + span {
+  float: right;
+  padding-left: 0.33em;
+  background: white
+}
+
+/** /DOTS **/

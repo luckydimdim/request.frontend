@@ -6,7 +6,7 @@ import 'package:angular2/router.dart';
     selector: 'request-documents',
     templateUrl: 'request_documents_component.html',
     directives: const [RouterLink])
-class RequestDocumentsComponent implements OnInit {
+class RequestDocumentsComponent implements OnInit, AfterViewInit {
   static const String route_name = 'RequestDocuments';
   static const String route_path = 'documents';
   static const Route route = const Route(
@@ -36,5 +36,13 @@ class RequestDocumentsComponent implements OnInit {
             <li class="breadcrumb-item"><a href="#/master/request">Создание заявки</a></li>            
             <li class="breadcrumb-item active">Первичная документация</li>
     ''';
+  }
+
+  @override
+  void ngAfterViewInit() {
+    var button = querySelector('[btn-aprove]') as ButtonElement;
+    button.onClick.listen((MouseEvent e) {
+      _router.navigate(['RequestSummary']);
+    });
   }
 }
