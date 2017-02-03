@@ -589,15 +589,15 @@
           </table>
         </div>
         <div class="card-block">
-          <div class="row">
-            <div class="col-md-5">
-              <table class="single">
-                <tr class="bordered-b-sm">
+          <div class="row" style="display: flex; flex-wrap: wrap">
+            <div class="col-md-5" style="display: flex; flex-direction: column;">
+              <table class="single" style="height: 100%">
+                <tr class="bordered-b-sm" style="height: 15%">
                   <td colspan="4" class="text-md-center">
                     <strong>REMARKS</strong> / ПРИМЕЧАНИЯ
                   </td>
                 </tr>
-                <tr class="bordered-b-sm">
+                <tr class="bordered-b-sm" style="height: 15%">
                   <td class="bordered-r-g-sm">
                     <br />
                   </td>
@@ -611,7 +611,7 @@
                     <br />
                   </td>
                 </tr>
-                <tr class="bordered-b-sm">
+                <tr class="bordered-b-sm" style="height: 15%">
                   <td colspan="4" class="text-md-center">
                     <small><strong>* Business Trips (Mission Order N°, Dates, Location, Purpose)</strong>
                     / Командировки (Командировочное удостоверение N°, Даты, Местоположение, Цели):</small>
@@ -619,15 +619,11 @@
                 </tr>
                 <tr>
                   <td colspan="4">
-                    <br />
-                    <br />
-                    <br />
-                    <br />
                   </td>
                 </tr>
               </table>
             </div>
-            <div class="col-md-7">
+            <div class="col-md-7 align-self-end" style="display: flex; flex-direction: column;">
               <div>
                 <p>
                   <sup>(1)</sup> <small>Insert a 1 for each day worked / вставьте цифру 1 за
@@ -648,11 +644,12 @@
                 </p>
               </div>
 
-              <table>
+              <table class="bordered-inner-sm text-md-center">
                 <tr class="bordered-b-sm">
                   <td></td>
                   <td>
                     <strong>Employee</strong>
+                    <br />
                     / Специалист
                   </td>
                   <td>
@@ -661,26 +658,26 @@
                   </td>
                   <td>
                     <strong>YAMAL LNG Hierarchy</strong>
+                    <br />
                     / Руководство ЯМАЛ СПГ
                   </td>
                 </tr>
                 <tr class="bordered-b-sm">
                   <td>
-                    <strong>Name</strong>
-                    / Ф.И.О
+                    <strong>Name</strong> / Ф.И.О
                   </td>
                   <td>
                     <strong>NAME SURNAME</strong>
                   </td>
                   <td></td>
                   <td>
-                    <strong>Benoit SALIN</strong>
-                    / Бенуа САЛЕН
+                    <strong>Benoit SALIN / Бенуа САЛЕН </strong>
                   </td>
                 </tr>
                 <tr class="bordered-b-sm">
                   <td>
                     <strong>Signature</strong>
+                    <br />
                     / Подпись
                   </td>
                   <td></td>
@@ -700,10 +697,10 @@
                 </tr>
               </table>
             </div>
-            <div class="card-block">
-              <button class="btn btn-outline-primary" print-cc2="" type="button"><i class="icon-printer"></i>&nbsp; Вид для печати</button>
-              <button class="btn btn-outline-success" type="button"><i class="icon-magic-wand"></i>&nbsp; Сохранить</button>
-            </div>
+          </div>
+          <div class="mt-1">
+            <button class="btn btn-outline-primary" print-cc2="" type="button"><i class="icon-printer"></i>&nbsp; Вид для печати</button>
+            <button class="btn btn-outline-success" type="button"><i class="fa fa-save"></i>&nbsp; Сохранить</button>
           </div>
         </div>
       </div>

@@ -107,6 +107,10 @@
   border-bottom: 1px solid #000;
 }
 
+.timesheet table.bordered-inner-sm tr td:nth-last-child(n + 2) {
+  border-right: 1px solid #000;
+}
+
 .timesheet td.bordered-r-g-sm {
   border-right: 1px solid #d1d4d7;
 }
