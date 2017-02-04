@@ -44,5 +44,12 @@ class RequestDocumentsComponent implements OnInit, AfterViewInit {
     button.onClick.listen((MouseEvent e) {
       _router.navigate(['RequestList']);
     });
+
+    window.onScroll.listen((Event e) {
+      var expander = querySelector('[expander]') as DivElement;
+      var scrollSize = window.pageYOffset;
+
+      expander.style.setProperty('height', scrollSize + 'px');
+    });
   }
 }
