@@ -40,9 +40,9 @@ class RequestDocumentsComponent implements OnInit, AfterViewInit {
 
   @override
   void ngAfterViewInit() {
-    /*var button = querySelector('[btn-aprove]') as ButtonElement;
+    var button = querySelector('[btn-aprove]') as ButtonElement;
     button.onClick.listen((MouseEvent e) {
-      _router.navigate(['RequestSummary']);
-    });*/
+      _router.navigate(['RequestList']);
+    });
   }
 }

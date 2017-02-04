@@ -45,8 +45,8 @@ class RequestSettingsComponent implements OnInit {
     breadcrumbInit();
 
     // TODO: Продумать показ/скрытие меню
-    //document.body.classes.add('mobile-open');
-    //document.body.classes.add('aside-menu-open');
+    document.body.classes.add('mobile-open');
+    document.body.classes.add('aside-menu-open');
 
     // TODO: Сделать более удобным переключение вкладок и показ/скрытие меню
     var oldActiveLink =
