@@ -51,5 +51,8 @@ class RequestDocumentsComponent implements OnInit, AfterViewInit {
 
       expander.style.setProperty('height', scrollSize + 'px');
     });
+
+    var summary = querySelector('[summary-block]') as DivElement;
+    var works = querySelector('[works-and-materials-block]') as DivElement;
   }
 }
