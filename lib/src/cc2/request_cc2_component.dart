@@ -78,7 +78,7 @@ class RequestCc2Component implements AfterViewInit, OnInit {
       var totalCell = row.querySelector('[data-total]') as TableCellElement;
 
       if (totalCell != null) {
-        quantityInput.onChange.listen((Event e) {
+        quantityInput.onKeyPress.listen((Event e) {
           var newQuantity = e.currentTarget as InputElement;
 
           totalCell.innerHtml = '${formatter.format(int.parse(priceCell.innerHtml, onError:(_) => 0) * int.parse(newQuantity.value, onError: (_) => 0))} р.';
