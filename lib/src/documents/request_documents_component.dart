@@ -54,5 +54,7 @@ class RequestDocumentsComponent implements OnInit, AfterViewInit {
 
     var summary = querySelector('[summary-block]') as DivElement;
     var works = querySelector('[works-and-materials-block]') as DivElement;
+
+    window.scrollTo(0,0);
   }
 }
