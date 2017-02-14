@@ -22,10 +22,9 @@ class RequestSettingsComponent implements OnInit {
       name: RequestSettingsComponent.route_name,
       useAsDefault: true);
 
-  final Router _router;
   final ResourcesLoaderService _resourcesLoaderService;
 
-  RequestSettingsComponent(this._router, this._resourcesLoaderService) {}
+  RequestSettingsComponent(this._resourcesLoaderService) {}
 
   void breadcrumbInit(){
     var  breadcrumbContent = querySelector('#breadcrumbContent') as DivElement;

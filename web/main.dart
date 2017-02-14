@@ -6,6 +6,11 @@ import 'package:angular2/src/core/reflection/reflection.dart';
 import 'package:angular2/router.dart';
 import 'package:angular2/platform/common.dart';
 
+import 'package:request/request_settings_component.dart';
+import 'package:request/src/cc2/request_cc2_component.dart';
+import 'package:request/src/cc3/request_cc3_component.dart';
+import 'package:request/src/documents/request_documents_component.dart';
+import 'package:request/src/ts/request_ts_component.dart';
 import 'package:resources_loader/resources_loader.dart';
 import 'package:master_layout/master_layout_component.dart';
 
@@ -19,6 +24,12 @@ bool get isDebug =>
 @View(
   template: '<master-layout><request></request></master-layout>',
   directives: const [MasterLayoutComponent, RequestComponent])
+@RouteConfig(const [
+  RequestSettingsComponent.route,
+  RequestCc2Component.route,
+  RequestCc3Component.route,
+  RequestTsComponent.route,
+  RequestDocumentsComponent.route])
 class AppComponent {}
 
 main() async {
