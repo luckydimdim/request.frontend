@@ -7,54 +7,56 @@
         </div>
 
         <div class="row pl-1 pr-1 d-table-row">
-          <div class="col-md-3 pt-1" style="border-right: 1px solid #d1d4d7; display: table-cell; float: none; height: 100%;">
-            <div works-and-materials-block>
-              <div class="font-weight-bold">
-                <span class="text-uppercase mb-q">Работы</span>
-              </div>
-              <ul class="leaders font-xs mb-0">
-                <li><span>Выбрано работ</span> <span>576</span></li>
-                <li><span>На сумму</span><span>$43 000</span></li>
-              </ul>
-              <a [routerLink]="['RequestSettings']" class="font-xs">Изменить</a>
-
-              <div class="font-weight-bold mt-2">
-                <span class="text-uppercase mb-q">Материалы</span>
-              </div>
-              <ul class="leaders font-xs mb-0">
-                <li><span>Выбрано материалов</span> <span>273</span></li>
-                <li><span>На сумму</span><span>$2 000</span></li>
-              </ul>
+          <div class="col-md-3 pt-1 d-100vh-va-top float-md-none" style="border-right: 1px solid #d1d4d7;">
+            <div works-and-materials>
               <div>
+                <div class="font-weight-bold">
+                  <span class="text-uppercase mb-q">Работы</span>
+                </div>
+                <ul class="leaders font-xs mb-0">
+                  <li><span>Выбрано работ</span> <span>576</span></li>
+                  <li><span>На сумму</span><span>$43 000</span></li>
+                </ul>
                 <a [routerLink]="['RequestSettings']" class="font-xs">Изменить</a>
-              </div>
-            </div>
-            <div class="pb-2" summary-block>
-              <div class="font-weight-bold mt-2">
-                <span class="text-uppercase mb-q">Итого</span>
-              </div>
-              <ul class="leaders font-xs mb-0">
-                <li><span>Общая стоимость</span> <span>30 000 руб.</span></li>
-                <li><span>Общая стоимость с НДС</span>
-                  <span>35 000 руб.</span></li>
-                <li><span>Зачет аванса</span> <span>1 000 руб.</span></li>
-                <li><span>Удержано резерва</span> <span>0 руб.</span></li>
-                <li><span class="font-weight-bold">Итого к оплате</span> <span
-                  class="font-weight-bold">34 000 руб.</span></li>
-              </ul>
 
-              <div class="mt-3">
-                <button type="button" class="btn btn-outline-warning btn-block"><i class="fa fa-save"></i>&nbsp;
-                  Сохранить
-                </button>
-                <button type="button" class="btn btn-success btn-block mt-1" btn-aprove><i class="icon-rocket"></i>&nbsp;
-                  Отправить на согласование
-                </button>
+                <div class="font-weight-bold mt-2">
+                  <span class="text-uppercase mb-q">Материалы</span>
+                </div>
+                <ul class="leaders font-xs mb-0">
+                  <li><span>Выбрано материалов</span> <span>273</span></li>
+                  <li><span>На сумму</span><span>$2 000</span></li>
+                </ul>
+                <div>
+                  <a [routerLink]="['RequestSettings']" class="font-xs">Изменить</a>
+                </div>
+              </div>
+              <div class="pb-2">
+                <div class="font-weight-bold mt-2">
+                  <span class="text-uppercase mb-q">Итого</span>
+                </div>
+                <ul class="leaders font-xs mb-0">
+                  <li><span>Общая стоимость</span> <span>30 000 руб.</span></li>
+                  <li><span>Общая стоимость с НДС</span>
+                    <span>35 000 руб.</span></li>
+                  <li><span>Зачет аванса</span> <span>1 000 руб.</span></li>
+                  <li><span>Удержано резерва</span> <span>0 руб.</span></li>
+                  <li><span class="font-weight-bold">Итого к оплате</span> <span
+                    class="font-weight-bold">34 000 руб.</span></li>
+                </ul>
+
+                <div class="mt-3">
+                  <button type="button" class="btn btn-outline-warning btn-block"><i class="fa fa-save"></i>&nbsp;
+                    Сохранить
+                  </button>
+                  <button type="button" class="btn btn-success btn-block mt-1" btn-aprove><i class="icon-rocket"></i>&nbsp;
+                    Отправить на согласование
+                  </button>
+                </div>
               </div>
             </div>
           </div>
           <!--./col-->
-          <div class="col-md-3 pt-1 align-top" style="display: table-cell; float: none;">
+          <div class="col-md-3 pt-1 d-100vh-va-top float-md-none">
             <h5 class="text-muted">
               Акты КС-2
             </h5>
@@ -97,7 +99,7 @@
             </div>
           </div>
           <!--./col-->
-          <div class="col-md-3 pt-1 align-top" style="display: table-cell; float: none;">
+          <div class="col-md-3 pt-1 d-100vh-va-top float-md-none">
             <h5 class="text-muted">
               Справки КС-3
             </h5>
@@ -121,7 +123,7 @@
             </div>
           </div>
           <!--./col-->
-          <div class="col-md-3 pt-1 align-top" style="display: table-cell; float: none;">
+          <div class="col-md-3 pt-1 align-top d-100vh-va-top float-md-none">
             <h5 class="text-muted">
               Табели учета рабочего времени
             </h5>

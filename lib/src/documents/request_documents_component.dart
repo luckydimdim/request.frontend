@@ -46,8 +46,15 @@ class RequestDocumentsComponent implements OnInit, AfterViewInit {
       _router.navigate(['RequestList']);
     });
 
+    var width = querySelector('[works-and-materials]').getComputedStyle().getPropertyValue('width');
+
+    window.onResize.listen((Event e) {
+      querySelector('[works-and-materials]').style.width = '';
+      width = querySelector('[works-and-materials]').getComputedStyle().getPropertyValue('width');
+    });
+
     window.onScroll.listen((Event e) {
-      var nav = querySelector('[sticky]') as HtmlElement;
+      /*var nav = querySelector('[sticky]') as HtmlElement;
 
       var e = window.pageYOffset,
         t = 40,
@@ -55,11 +62,16 @@ class RequestDocumentsComponent implements OnInit, AfterViewInit {
         i = t - e,
         r = min(n, i) - 50;
 
-      nav.style.setProperty('height', r*-1 + 'px');
-    });
+      nav.style.setProperty('height', r*-1 + 'px');*/
 
-    var summary = querySelector('[summary-block]') as DivElement;
-    var works = querySelector('[works-and-materials-block]') as DivElement;
+      var div = querySelector('[works-and-materials]') as DivElement;
+      if (window.pageYOffset > 0) {
+        div.style.position = 'fixed';
+        div.style.width = width;
+      } else {
+        div.style.position = 'relative';
+      }
+    });
 
     window.scrollTo(0,0);
   }
