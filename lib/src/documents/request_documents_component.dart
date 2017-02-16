@@ -1,4 +1,5 @@
 import 'dart:html';
+import 'dart:math';
 import 'package:angular2/core.dart';
 import 'package:angular2/router.dart';
 
@@ -46,10 +47,15 @@ class RequestDocumentsComponent implements OnInit, AfterViewInit {
     });
 
     window.onScroll.listen((Event e) {
-      var expander = querySelector('[expander]') as DivElement;
-      var scrollSize = window.pageYOffset;
+      var nav = querySelector('[sticky]') as HtmlElement;
 
-      expander.style.setProperty('height', scrollSize + 'px');
+      var e = window.pageYOffset,
+        t = 40,
+        n = window.innerHeight,
+        i = t - e,
+        r = min(n, i) - 50;
+
+      nav.style.setProperty('height', r*-1 + 'px');
     });
 
     var summary = querySelector('[summary-block]') as DivElement;
