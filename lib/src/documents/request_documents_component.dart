@@ -41,30 +41,42 @@ class RequestDocumentsComponent implements OnInit, AfterViewInit {
 
   @override
   void ngAfterViewInit() {
+    // FIXME: скрол не работает
+    window.scrollTo(0, 0);
+
     var button = querySelector('[btn-aprove]') as ButtonElement;
     button.onClick.listen((MouseEvent e) {
       _router.navigate(['RequestList']);
     });
 
-    var width = querySelector('[works-and-materials]').getComputedStyle().getPropertyValue('width');
+    sticky();
+  }
 
+  /**
+   * Фиксация боковой панели
+   */
+  void sticky() {
+    var width = querySelector('[sticky]').getComputedStyle().width;
+
+    // При ресайзе окна ширина панели
+    // подстраивается под ширину родительского элемента
     window.onResize.listen((Event e) {
-      querySelector('[works-and-materials]').style.width = '';
-      width = querySelector('[works-and-materials]').getComputedStyle().getPropertyValue('width');
+      width = querySelector('[sticky]').parent.clientWidth;
+
+      var paddingLeft = querySelector('[sticky]').parent.getComputedStyle().paddingLeft.replaceAll('px', '');
+      var paddingRight = querySelector('[sticky]').parent.getComputedStyle().paddingRight.replaceAll('px', '');
+
+      var pl = int.parse(paddingLeft);
+      var pr = int.parse(paddingRight);
+
+      width = width - pl - pr;
+
+      querySelector('[sticky]').style.width = width.toString() + 'px';
     });
 
+    // При прокрутке окна устанавливается position: fixed
     window.onScroll.listen((Event e) {
-      /*var nav = querySelector('[sticky]') as HtmlElement;
-
-      var e = window.pageYOffset,
-        t = 40,
-        n = window.innerHeight,
-        i = t - e,
-        r = min(n, i) - 50;
-
-      nav.style.setProperty('height', r*-1 + 'px');*/
-
-      var div = querySelector('[works-and-materials]') as DivElement;
+      var div = querySelector('[sticky]') as DivElement;
       if (window.pageYOffset > 0) {
         div.style.position = 'fixed';
         div.style.width = width;
@@ -72,7 +84,5 @@ class RequestDocumentsComponent implements OnInit, AfterViewInit {
         div.style.position = 'relative';
       }
     });
-
-    window.scrollTo(0,0);
   }
 }
