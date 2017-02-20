@@ -27,7 +27,7 @@ class RequestSettingsComponent implements OnInit {
   RequestSettingsComponent(this._resourcesLoaderService) {}
 
   void breadcrumbInit(){
-    var  breadcrumbContent = querySelector('#breadcrumbContent') as DivElement;
+    var  breadcrumbContent = querySelector('#breadcrumbContent') as HtmlElement;
 
     if (breadcrumbContent == null)
       return;

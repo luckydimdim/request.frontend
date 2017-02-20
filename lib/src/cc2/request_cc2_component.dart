@@ -26,7 +26,7 @@ class RequestCc2Component implements AfterViewInit, OnInit {
       this._router, this._resourcesLoaderService, this._routeParams) {}
 
   void breadcrumbInit(){
-    var  breadcrumbContent = querySelector('#breadcrumbContent') as DivElement;
+    var  breadcrumbContent = querySelector('#breadcrumbContent') as HtmlElement;
 
     if (breadcrumbContent == null)
       return;

@@ -26,7 +26,7 @@ class RequestDocumentsComponent implements OnInit, AfterViewInit {
   }
 
   void breadcrumbInit(){
-    var  breadcrumbContent = querySelector('#breadcrumbContent') as DivElement;
+    var  breadcrumbContent = querySelector('#breadcrumbContent') as HtmlElement;
 
     if (breadcrumbContent == null)
       return;
