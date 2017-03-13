@@ -22,25 +22,7 @@ class RequestCc3Component implements AfterViewInit {
   RequestCc3Component(
       this._router, this._resourcesLoaderService, this._routeParams) {}
 
-  @override
-  ngOnInit() {
-    String objectName = _routeParams.get('objectName');
-  }
-
   void breadcrumbInit(){
-    var  breadcrumbContent = querySelector('#breadcrumbContent') as HtmlElement;
-
-    if (breadcrumbContent == null)
-      return;
-
-    breadcrumbContent.innerHtml = '''
-            <li class="breadcrumb-item"><a href="#/master/dashboard">Главная</a></li>
-            <li class="breadcrumb-item"><a href="#/master/requestList">Список заявок</a></li>
-            <li class="breadcrumb-item"><a href="#/master/request">Создание заявки</a></li>
-            <li class="breadcrumb-item"><a href="#/master/request/documents">Первичная документация</a></li>
-            <li class="breadcrumb-item"><a href="#/master/request/cc-3">Справка КС-3 по оюъекту &laquo;Морской порт&raquo;</a></li>
-            <li class="breadcrumb-item active">Морской порт</li>
-    ''';
   }
 
   @override

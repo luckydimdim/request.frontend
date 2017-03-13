@@ -1,13 +1,8 @@
-import 'dart:async';
 import 'dart:html';
 
 import 'package:angular2/core.dart';
 import 'package:angular2/router.dart';
-import 'package:js/js_util.dart';
-import 'package:js/js.dart';
 import 'package:resources_loader/resources_loader.dart';
-import 'package:grid/JsObjectConverter.dart';
-import 'package:grid/jq_grid.dart';
 
 @Component(
     selector: 'request-settings',
@@ -27,16 +22,7 @@ class RequestSettingsComponent implements OnInit {
   RequestSettingsComponent(this._resourcesLoaderService) {}
 
   void breadcrumbInit(){
-    var  breadcrumbContent = querySelector('#breadcrumbContent') as HtmlElement;
 
-    if (breadcrumbContent == null)
-      return;
-
-    breadcrumbContent.innerHtml = '''
-            <li class="breadcrumb-item"><a href="#/master/dashboard">Главная</a></li>
-            <li class="breadcrumb-item"><a href="#/master/requestList">Список заявок</a></li>
-            <li class="breadcrumb-item active">Создание заявки</a>
-    ''';
   }
 
   @override
@@ -97,122 +83,9 @@ class RequestSettingsComponent implements OnInit {
       <hr/>''';
 
     newActivePanel.innerHtml = htmlElement;
-
-    WorksGridInit();
-    MaterialsGridInit();
-
-    $('a[data-toggle="tab"]').on('shown.bs.tab', allowInterop(render));
   }
 
   void render(dynamic e) {
-    var target = getProperty(e, 'target');
-    var hash = getProperty(target, 'hash');
-
-    if (hash == '#works') {
-      $("#worksGrid").jqxTreeGrid('render');
-    }
-    else if (hash == '#materials') {
-      $("#materialsGrid").jqxTreeGrid('render');
-    }
   }
 
-  Future WorksGridInit() async {
-    var columns = new List<Column>();
-
-    columns.add(new Column()
-      ..dataField = 'Name'
-      ..text = 'Наименование этапа/работы'
-      ..pinned = true);
-
-    columns.add(new Column()
-      ..dataField = 'Unit'
-      ..text = 'Ед. изм.');
-    columns.add(new Column()
-      ..dataField = 'Amount'
-      ..text = 'Объем');
-    columns.add(new Column()
-      ..dataField = 'Cost'
-      ..text = 'Стоимость');
-    columns.add(new Column()
-      ..dataField = 'UnitCost'
-      ..text = 'Стоимость ед измерения');
-    columns.add(new Column()
-      ..dataField = 'Currency'
-      ..text = 'Валюта');
-    columns.add(new Column()
-      ..dataField = 'ContractorName'
-      ..text = 'Исполнитель');
-
-    var hierarchy = new Hierarchy()
-      ..root = 'children';
-
-    var source = new SourceOptions()
-      ..url = 'packages/request/src/settings/works.json'
-      ..id = 'recid'
-      ..hierarchy = hierarchy
-      ..dataType = 'json';
-
-    var options = new GridOptions()
-      ..checkboxes = true
-      ..source = source
-      ..height = null
-      ..editable = false
-      ..columns = columns;
-
-    var _worksGrid = new jqGrid(this._resourcesLoaderService, "#worksGrid",
-        JsObjectConverter.convert(options));
-    await _worksGrid.Init();
-  }
-
-  Future MaterialsGridInit() async {
-    var columns = new List<Column>();
-
-    columns.add(new Column()
-      ..dataField = 'Name'
-      ..text = 'Наименование материалов'
-      ..pinned = true);
-
-    columns.add(new Column()
-      ..dataField = 'Unit'
-      ..text = 'Ед. изм.');
-    columns.add(new Column()
-      ..dataField = 'Amount'
-      ..text = 'Количество');
-    columns.add(new Column()
-      ..dataField = 'Currency'
-      ..text = 'Валюта');
-    columns.add(new Column()
-      ..dataField = 'ObjectConstruction'
-      ..text = 'Объект строительства');
-    columns.add(new Column()
-      ..dataField = 'Cost'
-      ..text = 'Стоимость');
-    columns.add(new Column()
-      ..dataField = 'UnitCost'
-      ..text = 'Стоимость ед измерения');
-    columns.add(new Column()
-      ..dataField = 'DeliveryDate'
-      ..text = 'Дата поставки');
-
-    var hierarchy = new Hierarchy()
-      ..root = 'children';
-
-    var source = new SourceOptions()
-      ..url = 'packages/request/src/settings/materials.json'
-      ..id = 'recid'
-      ..hierarchy = hierarchy
-      ..dataType = 'json';
-
-    var options = new GridOptions()
-      ..checkboxes = true
-      ..source = source
-      ..editable = false
-      ..height = null
-      ..columns = columns;
-
-    var _worksGrid = new jqGrid(this._resourcesLoaderService, "#materialsGrid",
-        JsObjectConverter.convert(options));
-
-    await _worksGrid.Init();
-  }
 }
